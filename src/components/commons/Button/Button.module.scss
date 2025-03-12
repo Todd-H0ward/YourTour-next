@@ -1,0 +1,91 @@
+@import '@/assets/styles/typography';
+@import '@/assets/styles/helpers';
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.solid,
+.filled {
+  max-width: 235px;
+  width: 100%;
+  padding: 15px 30px;
+  @extend .p-normal;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.solid {
+  color: var(--white);
+  background: var(--green-400);
+
+  &:hover {
+    background: var(--green-300);
+  }
+
+  &:active {
+    background: var(--green-200);
+  }
+}
+
+.filled {
+  color: var(--green-400);
+  background: var(--green-100);
+
+  &:hover {
+    background: var(--gray-100);
+  }
+
+  &:active {
+    background: var(--gray-200);
+  }
+}
+
+.link {
+  position: relative;
+
+  &::after {
+    @extend .underline;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+.withIcon {
+  padding: 7px 20px;
+  background: none;
+  @extend .p-big;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.small {
+  width: auto;
+  padding: 5px 20px;
+  @extend .p-small;
+  color: var(--black);
+  background: var(--white);
+  border-radius: 10px;
+
+  transition:
+    background 0.4s,
+    color 0.2s;
+
+  &:hover {
+    color: var(--white);
+    background: var(--orange-200);
+  }
+
+  &:active {
+    color: var(--black);
+    background: var(--orange-100);
+  }
+}

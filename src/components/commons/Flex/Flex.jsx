@@ -17,7 +17,7 @@ const justifyClasses = {
 
 const Flex = ({
   vertical = false,
-  align = 'stretch',
+  align = 'start',
   justify = 'start',
   wrap = false,
   gap = 0,
