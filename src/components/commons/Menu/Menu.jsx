@@ -4,13 +4,15 @@ import styles from './Menu.module.scss';
 
 const Menu = ({ items }) => {
   return (
-    <Flex gap={50}>
-      {items.map((item) => (
-        <Link key={item.title} href={item.href} className={styles.link}>
-          {item.title}
-        </Link>
-      ))}
-    </Flex>
+    <nav className={styles.menu}>
+      <Flex className={styles.list} gap={50}>
+        {items.map((item) => (
+          <Link key={item.title} href={item.href} className={styles.link}>
+            {item.title}
+          </Link>
+        ))}
+      </Flex>
+    </nav>
   );
 };
 

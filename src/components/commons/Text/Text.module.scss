@@ -1,0 +1,21 @@
+@use '@/assets/styles/typography';
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.big {
+  @extend .p-big;
+}
+
+.normal {
+  @extend .p-normal;
+}
+
+.small {
+  @extend .p-small;
+}

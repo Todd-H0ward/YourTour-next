@@ -1,5 +1,17 @@
 @use '@/assets/styles/helpers';
 
+.menu {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.list {
+  @media (max-width: 1024px) {
+    gap: 30px !important;
+  }
+}
+
 .link {
   position: relative;
 

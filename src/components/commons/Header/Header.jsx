@@ -34,9 +34,9 @@ const Header = () => {
         <Link href="/">
           <Image
             className={styles.logo}
-            src="/logo.svg"
-            width={180}
-            height={30}
+            src="/icons/logo.svg"
+            width={182}
+            height={32}
             alt="logo"
           />
         </Link>

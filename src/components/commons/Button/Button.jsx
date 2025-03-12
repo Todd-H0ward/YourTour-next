@@ -26,7 +26,7 @@ const Button = ({
     <button className={clsx(styles.btn, classes, className)} {...props}>
       {children}
       {withIcon && (
-        <Image src="/arrow-icon.svg" alt="arrow" width={24} height={26} />
+        <Image src="/icons/arrow-icon.svg" alt="arrow" width={24} height={26} />
       )}
     </button>
   );

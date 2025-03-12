@@ -4,15 +4,24 @@
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 29px 0;
+  padding: 29px 10px;
   color: var(--white);
   transition: all 0.3s;
+
+  @media (max-width: 375px) {
+    padding: 33px 20px;
+  }
 
   .container {
     max-width: 1170px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 5px;
   }
+}
+
+.logo {
+  width: clamp(133px, 19vw, 182px);
 }
 
 .fixed {
