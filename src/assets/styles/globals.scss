@@ -1,0 +1,11 @@
+@use 'reset';
+@use 'variables';
+@use 'helpers';
+@use 'typography';
+
+body {
+  min-width: 100vh;
+  color: var(--black);
+  background: var(--beige-100);
+  @extend .p-normal;
+}

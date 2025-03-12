@@ -1,0 +1,14 @@
+@use '@/assets/styles/helpers';
+
+.link {
+  position: relative;
+
+  &::after {
+    background-color: var(--white);
+    @extend .underline;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
