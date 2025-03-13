@@ -16,7 +16,9 @@ const TourCard = ({ tour }) => {
         alt="tour"
       />
       <Flex className={styles.content} vertical align="start" gap={16}>
-        <Title size="small">{tour.title}</Title>
+        <Title size="small" w={230}>
+          {tour.title}
+        </Title>
         <Text className={styles.price}>{tour.price}</Text>
         <Button withIcon className={styles.btn}>
           Подробнее

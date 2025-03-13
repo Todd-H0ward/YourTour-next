@@ -13,7 +13,14 @@ const alignClasses = {
   left: styles.alignLeft,
 };
 
-const Title = ({ size = 'normal', align = 'left', children, className }) => {
+const Title = ({
+  size = 'normal',
+  align = 'left',
+  mb = 0,
+  w,
+  children,
+  className,
+}) => {
   const tagBySize = {
     big: 'h1',
     normal: 'h2',
@@ -22,7 +29,15 @@ const Title = ({ size = 'normal', align = 'left', children, className }) => {
 
   return createElement(
     tagBySize[size],
-    { className: clsx(sizeClasses[size], alignClasses[align], className) },
+    {
+      className: clsx(
+        styles.title,
+        sizeClasses[size],
+        alignClasses[align],
+        className,
+      ),
+      style: { '--mb': `${mb}px`, '--w': `${w}px` },
+    },
     [children],
   );
 };

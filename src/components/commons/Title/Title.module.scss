@@ -1,5 +1,14 @@
 @use '@/assets/styles/typography';
 
+.title {
+  margin-bottom: var(--mb);
+  max-width: var(--w, 100%);
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
+}
+
 .big {
   @extend .h1;
 }
