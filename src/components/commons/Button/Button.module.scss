@@ -59,9 +59,11 @@
 }
 
 .withIcon {
+  width: auto;
   padding: 7px 20px;
   background: none;
   @extend .p-big;
+  font-weight: 700;
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: all 0.3s;
