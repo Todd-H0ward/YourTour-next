@@ -1,0 +1,39 @@
+@use '@/assets/styles/typography';
+
+.tabs {
+  column-gap: clamp(10px, 2.9vw, 30px);
+  row-gap: 4px;
+}
+
+.tab {
+  position: relative;
+  padding-bottom: 6px;
+  @extend .p-big;
+  cursor: pointer;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    margin: 0 auto;
+    background: var(--black);
+    transition: width 0.3s;
+    content: '';
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.active {
+  color: var(--orange-200);
+
+  &::after {
+    width: 100%;
+    background: var(--orange-200);
+  }
+}
