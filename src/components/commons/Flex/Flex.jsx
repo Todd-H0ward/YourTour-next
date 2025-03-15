@@ -32,7 +32,12 @@ const Flex = ({
   ];
 
   return (
-    <div className={clsx(styles.flex, classes, className)} style={{ gap }}>
+    <div
+      className={clsx(styles.flex, classes, className)}
+      style={{
+        '--gap': `${gap}px`,
+      }}
+    >
       {children}
     </div>
   );

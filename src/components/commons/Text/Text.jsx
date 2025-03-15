@@ -12,9 +12,25 @@ const alignClasses = {
   left: styles.alignLeft,
 };
 
-const Text = ({ align = 'left', size = 'normal', children, className }) => {
+const Text = ({
+  align = 'left',
+  size = 'normal',
+  mb = 0,
+  children,
+  className,
+}) => {
   return (
-    <p className={clsx(alignClasses[align], sizeClasses[size], className)}>
+    <p
+      className={clsx(
+        styles.text,
+        alignClasses[align],
+        sizeClasses[size],
+        className,
+      )}
+      style={{
+        '--mb': `${mb}px`,
+      }}
+    >
       {children}
     </p>
   );

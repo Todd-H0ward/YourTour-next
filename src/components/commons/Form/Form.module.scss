@@ -1,0 +1,22 @@
+.form {
+  width: 100%;
+  padding: clamp(60px, 2.212rem + 2.4vw, 70px);
+  background: var(--white);
+  border-radius: clamp(
+    var(--border-radius-middle),
+    1.153rem + 3.08vw,
+    var(--border-radius)
+  );
+
+  @media (max-width: 768px) {
+    padding: 20px 20px 40px;
+  }
+}
+
+.agreement {
+  color: var(--gray-300);
+
+  a {
+    color: var(--black);
+  }
+}

@@ -1,5 +1,9 @@
 @use '@/assets/styles/typography';
 
+.text {
+  margin-bottom: var(--mb, 0);
+}
+
 .alignCenter {
   text-align: center;
 }
