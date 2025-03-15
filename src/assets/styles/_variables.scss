@@ -7,6 +7,7 @@
     0.167rem + 4.62vw,
     var(--border-radius)
   );
+  --container-padding: clamp(21px, 0.157rem + 4.93vw, 53px);
 
   --black: #1b1f2b;
   --white: #fff;
