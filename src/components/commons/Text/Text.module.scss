@@ -2,6 +2,11 @@
 
 .text {
   margin-bottom: var(--mb, 0);
+  max-width: var(--w, 100%);
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
 }
 
 .alignCenter {

@@ -1,0 +1,18 @@
+.card {
+  padding: 40px;
+  display: flex;
+  background: var(--beige-200);
+  border-radius: var(--border-radius-change);
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+.text {
+  white-space: pre-line;
+}
+
+.avatar {
+  border-radius: 50%;
+}

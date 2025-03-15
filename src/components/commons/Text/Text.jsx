@@ -16,6 +16,7 @@ const Text = ({
   align = 'left',
   size = 'normal',
   mb = 0,
+  w,
   children,
   className,
 }) => {
@@ -29,6 +30,7 @@ const Text = ({
       )}
       style={{
         '--mb': `${mb}px`,
+        '--w': `${w}px`,
       }}
     >
       {children}
