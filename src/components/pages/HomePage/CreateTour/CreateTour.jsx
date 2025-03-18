@@ -7,7 +7,7 @@ import styles from './CreateTour.module.scss';
 
 const CreateTour = () => {
   return (
-    <section>
+    <section id="create">
       <Container>
         <Flex vertical align="center">
           <Title mb={30} align="center" className={styles.title}>

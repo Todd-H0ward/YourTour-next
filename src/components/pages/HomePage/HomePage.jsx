@@ -6,10 +6,11 @@ import Reviews from '@/components/pages/HomePage/Reviews/Reviews';
 import Photos from '@/components/pages/HomePage/Photos/Photos';
 import Histories from '@/components/pages/HomePage/Histories/Histories';
 import Info from '@/components/pages/HomePage/Info/Info';
+import styles from './HomePage.module.scss';
 
 const HomePage = () => {
   return (
-    <Layout>
+    <Layout className={styles.page}>
       <Hero />
       <Tours />
       <CreateTour />

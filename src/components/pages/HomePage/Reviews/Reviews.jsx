@@ -8,7 +8,7 @@ import { reviews } from '@/data/reviews';
 
 const Reviews = () => {
   return (
-    <section>
+    <section id="reviews">
       <Container>
         <Flex vertical align="center">
           <Title mb={30} w={530} align="center">

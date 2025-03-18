@@ -1,10 +1,11 @@
 import Header from '@/components/commons/Header/Header';
 import styles from './Layout.module.scss';
 import Footer from '@/components/commons/Footer/Footer';
+import clsx from 'clsx';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, className }) => {
   return (
-    <div className={styles.wrapper}>
+    <div className={clsx(styles.layout, className)}>
       <Header />
       <main className={styles.main}>{children}</main>
       <Footer />

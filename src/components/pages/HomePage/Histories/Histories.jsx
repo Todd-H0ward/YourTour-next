@@ -7,7 +7,7 @@ import HistoryCard from '@/components/commons/HistoryCard/HistoryCard';
 
 const Histories = () => {
   return (
-    <section>
+    <section id="histories">
       <Container>
         <Title align="center" mb={30}>
           Истории путешествий
@@ -19,7 +19,7 @@ const Histories = () => {
 
         <Flex vertical align="stretch" gap={50}>
           {histories.map((history) => (
-            <HistoryCard key={history.title} history={history} />
+            <HistoryCard key={history.id} history={history} />
           ))}
         </Flex>
       </Container>

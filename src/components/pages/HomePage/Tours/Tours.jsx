@@ -32,7 +32,7 @@ const tabsItems = [
 
 const Tours = () => {
   return (
-    <section>
+    <section id="tours">
       <Container>
         <Flex vertical align="center">
           <Title className={styles.title} size="normal" align="center">

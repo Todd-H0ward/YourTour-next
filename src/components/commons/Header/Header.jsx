@@ -12,11 +12,11 @@ import Container from '@/components/commons/Container/Container';
 const menuItems = [
   {
     title: 'Туры',
-    href: '#choice',
+    href: '#tours',
   },
   {
     title: 'Создать тур',
-    href: '#make',
+    href: '#create',
   },
   {
     title: 'Отзывы',
@@ -24,7 +24,7 @@ const menuItems = [
   },
   {
     title: 'Истории',
-    href: '#history',
+    href: '#histories',
   },
 ];
 
