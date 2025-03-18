@@ -1,0 +1,30 @@
+.image {
+  border-radius: var(--border-radius-change);
+  height: auto;
+}
+
+.text {
+  color: var(--gray-300);
+}
+
+.link {
+  color: var(--black);
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+    margin: 0 auto;
+  }
+
+  .info {
+    align-items: center;
+
+    & * {
+      text-align: center;
+    }
+  }
+}

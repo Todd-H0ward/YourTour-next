@@ -1,10 +1,20 @@
 import styles from './Container.module.scss';
 import clsx from 'clsx';
 
-const Container = ({ fullWidth = false, children, className }) => {
+const Container = ({
+  fullWidth = false,
+  small = false,
+  children,
+  className,
+}) => {
   return (
     <div
-      className={clsx(styles.container, fullWidth && styles.full, className)}
+      className={clsx(
+        styles.container,
+        fullWidth && styles.full,
+        small && styles.small,
+        className,
+      )}
     >
       {children}
     </div>
