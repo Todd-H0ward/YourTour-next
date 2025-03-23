@@ -1,0 +1,15 @@
+@use 'reset';
+@use 'variables';
+@use 'helpers';
+@use 'typography';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--black);
+  background: var(--beige-100);
+  @extend .p-normal;
+}

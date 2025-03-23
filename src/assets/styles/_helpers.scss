@@ -1,0 +1,13 @@
+.underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 0;
+  height: 1px;
+  margin: 0 auto;
+  background: var(--black);
+  transition: width 0.3s;
+  content: '';
+}

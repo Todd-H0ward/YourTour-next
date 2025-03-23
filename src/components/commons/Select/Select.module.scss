@@ -1,0 +1,39 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.select {
+  position: relative;
+  padding: clamp(10px, 0.264rem + 1.54vw, 20px);
+  flex: 1 1 auto;
+  width: 100%;
+  border: 1px solid var(--beige-200);
+  border-radius: 10px;
+  background: var(--beige-100);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: transform 0.2s;
+
+  @media (max-width: 768px) {
+    width: 25px;
+    right: 10px;
+  }
+}
+
+.open {
+  transform: translateY(-50%) rotate(180deg);
+}

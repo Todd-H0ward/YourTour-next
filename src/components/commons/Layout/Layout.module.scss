@@ -1,0 +1,19 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 135px;
+  margin-bottom: 135px;
+
+  @media (max-width: 768px) {
+    gap: 75px;
+    margin-bottom: 75px;
+  }
+}

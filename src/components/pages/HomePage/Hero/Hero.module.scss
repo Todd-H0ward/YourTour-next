@@ -1,0 +1,34 @@
+.hero {
+  padding: 207px 0 119px;
+  background: url('/images/hero-bg.jpg') no-repeat center;
+  background-size: cover;
+  color: var(--white);
+
+  @media (max-width: 1024px) {
+    padding: 208px 0 119px;
+  }
+
+  @media (max-width: 375px) {
+    padding: 141px 0 52px;
+  }
+}
+
+.content {
+  @media (max-width: 375px) {
+    gap: 40px;
+  }
+}
+
+.title {
+  max-width: 630px;
+}
+
+.description {
+  @media (max-width: 1024px) {
+    max-width: 400px;
+  }
+
+  @media (max-width: 375px) {
+    max-width: 300px;
+  }
+}

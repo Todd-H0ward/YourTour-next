@@ -1,0 +1,49 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 29px 0;
+  color: var(--white);
+  transition: all 0.3s;
+
+  &.fixed {
+    position: fixed;
+    color: var(--black);
+    background: rgba(243, 239, 232, 0.6);
+    backdrop-filter: blur(27px);
+
+    .logo {
+      filter: invert(1);
+    }
+
+    & *::after {
+      background-color: var(--black);
+    }
+  }
+
+  @media (max-width: 375px) {
+    padding: 33px 0;
+  }
+}
+
+.container {
+  @media (max-width: 1024px) {
+    padding: 0 clamp(20px, -0.086rem + 5.7vw, 57px) !important;
+  }
+
+  @media (max-width: 375px) {
+    padding: 0 20px !important;
+  }
+}
+
+.logo {
+  width: clamp(133px, 19vw, 182px);
+}
+
+.menu {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

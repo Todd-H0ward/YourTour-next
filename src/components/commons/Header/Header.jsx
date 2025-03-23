@@ -1,0 +1,57 @@
+'use client';
+
+import Flex from '@/components/commons/Flex/Flex';
+import Link from 'next/link';
+import Menu from '@/components/commons/Menu/Menu';
+import Image from 'next/image';
+import styles from './Header.module.scss';
+import useScroll from '@/hooks/useScroll';
+import clsx from 'clsx';
+import Container from '@/components/commons/Container/Container';
+
+const menuItems = [
+  {
+    title: 'Туры',
+    href: '#tours',
+  },
+  {
+    title: 'Создать тур',
+    href: '#create',
+  },
+  {
+    title: 'Отзывы',
+    href: '#reviews',
+  },
+  {
+    title: 'Истории',
+    href: '#histories',
+  },
+];
+
+const Header = () => {
+  const { scrollY } = useScroll();
+
+  return (
+    <header className={clsx(styles.header, scrollY > 450 && styles.fixed)}>
+      <Container className={styles.container}>
+        <Flex justify="between" align="flex-start">
+          <Link href="/">
+            <Image
+              className={styles.logo}
+              src="/icons/logo.svg"
+              width={182}
+              height={32}
+              alt="logo"
+            />
+          </Link>
+
+          <Menu className={styles.menu} items={menuItems} />
+
+          <a href="tel:89999999999">+7 999 999 99 99</a>
+        </Flex>
+      </Container>
+    </header>
+  );
+};
+
+export default Header;
