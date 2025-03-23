@@ -7,6 +7,8 @@
   justify-content: center;
   gap: 15px;
   white-space: nowrap;
+  flex-shrink: 1;
+  width: auto;
   cursor: pointer;
 }
 
@@ -18,6 +20,10 @@
   @extend .p-normal;
   border-radius: 10px;
   transition: all 0.3s;
+
+  @media (max-width: 768px) {
+    padding: 12px 15px;
+  }
 }
 
 .solid {
@@ -58,7 +64,7 @@
   }
 }
 
-.withIcon {
+.btn.withIcon {
   width: auto;
   padding: 7px 20px;
   background: none;
@@ -76,7 +82,6 @@
   color: var(--black);
   background: var(--white);
   border-radius: 10px;
-
   transition:
     background 0.4s,
     color 0.2s;

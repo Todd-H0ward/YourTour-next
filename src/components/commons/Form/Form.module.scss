@@ -1,3 +1,5 @@
+@use '@/assets/styles/typography';
+
 .form {
   width: 100%;
   padding: clamp(60px, 2.212rem + 2.4vw, 70px);
@@ -13,10 +15,29 @@
   }
 }
 
+.content {
+  @media (max-width: 1024px) {
+    grid-row-gap: 32px;
+    row-gap: 32px;
+  }
+
+  @media (max-width: 768px) {
+    gap: 31px;
+  }
+}
+
 .agreement {
+  @extend .p-small;
   color: var(--gray-300);
 
   a {
     color: var(--black);
+  }
+}
+
+.btns {
+  flex-shrink: 1;
+  @media (max-width: 768px) {
+    gap: 10px;
   }
 }

@@ -10,10 +10,8 @@ const CreateTour = () => {
     <section id="create">
       <Container>
         <Flex vertical align="center">
-          <Title mb={30} align="center" className={styles.title}>
-            Собери свой тур
-          </Title>
-          <Text mb={100} className={styles.description} align="center">
+          <Title align="center">Собери свой тур</Title>
+          <Text className={styles.description} mb={100} w={400} align="center">
             Идейные соображения высшего порядка, а также рамки и место обучения
             кадров
           </Text>

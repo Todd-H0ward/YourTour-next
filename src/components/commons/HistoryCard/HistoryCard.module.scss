@@ -36,9 +36,20 @@
   );
 }
 
+.title {
+  @media (max-width: 375px) {
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+}
+
 .list {
   list-style: disc;
   padding-left: 29px;
+
+  @media (max-width: 375px) {
+    padding-left: 26px;
+  }
 }
 
 .btn {

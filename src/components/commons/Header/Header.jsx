@@ -33,7 +33,7 @@ const Header = () => {
 
   return (
     <header className={clsx(styles.header, scrollY > 450 && styles.fixed)}>
-      <Container>
+      <Container className={styles.container}>
         <Flex justify="between" align="flex-start">
           <Link href="/">
             <Image
@@ -45,7 +45,7 @@ const Header = () => {
             />
           </Link>
 
-          <Menu items={menuItems} />
+          <Menu className={styles.menu} items={menuItems} />
 
           <a href="tel:89999999999">+7 999 999 99 99</a>
         </Flex>

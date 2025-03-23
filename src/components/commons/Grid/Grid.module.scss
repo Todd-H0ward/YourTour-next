@@ -1,18 +1,15 @@
 .grid {
   display: grid;
+  column-gap: var(--gap-y, 0);
   gap: var(--gap, 0);
-
-  @media (max-width: 1920px) {
-    grid-template-columns: repeat(var(--large, 3), 1fr);
-    grid-gap: 30px;
-  }
+  grid-template-columns: repeat(var(--large, 3), 1fr);
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(var(--big, 2), 1fr);
     grid-gap: 18px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 768px) {
     grid-template-columns: repeat(var(--small, 1), 1fr);
   }
 }

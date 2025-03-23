@@ -1,7 +1,7 @@
 .label {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .textarea {
@@ -11,11 +11,9 @@
   word-wrap: break-word;
   height: clamp(132px, 7.528rem + 3.08vw, 152px);
   padding: clamp(10px, 0.264rem + 1.54vw, 20px);
-
   background: var(--beige-100);
   border: 1px solid var(--beige-200);
   border-radius: 10px;
-
   transition: all 0.3s;
 
   &::placeholder {
@@ -37,7 +35,6 @@
 
   &::-webkit-scrollbar-thumb {
     margin-right: 10px;
-
     background: rgba(var(--black), 0.3);
     border-radius: 10px;
 

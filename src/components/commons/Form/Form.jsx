@@ -51,8 +51,13 @@ const Form = () => {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit} onReset={handleReset}>
-      <Flex vertical align="stretch" gap={33}>
-        <Grid breakpoints={{ large: 2, big: 1, small: 1 }} gap={33}>
+      <Flex className={styles.content} vertical align="stretch" gap={33}>
+        <Grid
+          className={styles.content}
+          breakpoints={{ large: 2, big: 2, small: 1 }}
+          gap={30}
+          gapY={33}
+        >
           <Input
             label="Имя"
             placeholder="Введите Ваше имя"
@@ -128,7 +133,7 @@ const Form = () => {
           checked={form.isAgree}
           onChange={(e) => handleChange('isAgree', e.target.checked)}
         />
-        <Flex gap={30}>
+        <Flex className={styles.btns} gap={30}>
           <Button type="submit">Найти тур</Button>
           <Button type="reset" variant="filled">
             Сбросить

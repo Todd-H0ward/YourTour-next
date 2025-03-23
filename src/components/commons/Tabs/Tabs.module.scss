@@ -1,31 +1,35 @@
 @use '@/assets/styles/typography';
+@use '@/assets/styles/helpers';
 
 .tabs {
-  column-gap: clamp(10px, 2.9vw, 30px);
-  row-gap: 4px;
+  @media (max-width: 768px) {
+    column-gap: 10px;
+  }
 }
 
 .tab {
   position: relative;
-  padding-bottom: 6px;
   @extend .p-big;
   cursor: pointer;
+  padding-bottom: 5px;
 
   &:after {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 0;
+    @extend .underline;
     height: 2px;
-    margin: 0 auto;
-    background: var(--black);
-    transition: width 0.3s;
-    content: '';
   }
 
-  &:hover::after {
-    width: 100%;
+  @media (hover: hover) {
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding-bottom: 6px;
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 0;
   }
 }
 

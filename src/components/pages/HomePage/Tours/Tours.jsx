@@ -1,5 +1,4 @@
 import styles from './Tours.module.scss';
-import Flex from '@/components/commons/Flex/Flex';
 import Title from '@/components/commons/Title/Title';
 import Tabs from '@/components/commons/Tabs/Tabs';
 import { tours } from '@/data/tours';
@@ -34,18 +33,16 @@ const Tours = () => {
   return (
     <section id="tours">
       <Container>
-        <Flex vertical align="center">
-          <Title className={styles.title} size="normal" align="center">
-            Выбери свой тур
-          </Title>
-          <Tabs className={styles.tabs} items={tabsItems} />
+        <Title className={styles.title} mb={35} size="normal" align="center">
+          Выбери свой тур
+        </Title>
+        <Tabs className={styles.tabs} items={tabsItems} />
 
-          <Grid gap={30}>
-            {tours.map((tour) => (
-              <TourCard key={tour.id} tour={tour} />
-            ))}
-          </Grid>
-        </Flex>
+        <Grid gap={30}>
+          {tours.map((tour) => (
+            <TourCard key={tour.id} tour={tour} />
+          ))}
+        </Grid>
       </Container>
     </section>
   );

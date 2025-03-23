@@ -21,6 +21,7 @@ const Flex = ({
   justify = 'start',
   wrap = false,
   gap = 0,
+  gapY = gap,
   children,
   className,
 }) => {
@@ -36,6 +37,7 @@ const Flex = ({
       className={clsx(styles.flex, classes, className)}
       style={{
         '--gap': `${gap}px`,
+        '--gap-y': `${gapY}px`,
       }}
     >
       {children}

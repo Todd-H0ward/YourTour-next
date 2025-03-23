@@ -2,6 +2,10 @@
   display: flex;
   align-items: flex-start;
   gap: 19px;
+
+  @media (max-width: 1024px) {
+    gap: 10px;
+  }
 }
 
 .checkbox {

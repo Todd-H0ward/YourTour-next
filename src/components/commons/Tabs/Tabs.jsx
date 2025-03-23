@@ -14,6 +14,7 @@ const Tabs = ({ items, className }) => {
     <Flex
       wrap
       gap={30}
+      gapY={10}
       justify="center"
       className={clsx(styles.tabs, className)}
     >

@@ -16,7 +16,7 @@ const alignClasses = {
 const Title = ({
   size = 'normal',
   align = 'left',
-  mb = 0,
+  mb = 30,
   w,
   children,
   className,

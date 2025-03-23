@@ -16,3 +16,15 @@
 .avatar {
   border-radius: 50%;
 }
+
+.inner {
+  @media (max-width: 768px) {
+    gap: 40px;
+  }
+}
+
+.comment {
+  @media (max-width: 768px) {
+    gap: 25px;
+  }
+}

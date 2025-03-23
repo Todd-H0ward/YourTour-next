@@ -1,6 +1,7 @@
 .flex {
   display: flex;
-  gap: var(--gap, 0);
+  column-gap: var(--gap, 0);
+  row-gap: var(--gap-y, 0);
 }
 
 .vertical {

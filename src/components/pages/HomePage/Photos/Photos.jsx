@@ -12,10 +12,8 @@ const Photos = () => {
     <section>
       <Container fullWidth>
         <Flex vertical align="center">
-          <Title mb={30} align="center">
-            Фотографии путешествий
-          </Title>
-          <Text mb={100} w={400} align="center">
+          <Title align="center">Фотографии путешествий</Title>
+          <Text className={styles.description} mb={100} w={400} align="center">
             Идейные соображения высшего порядка, а также рамки и место обучения
             кадров
           </Text>

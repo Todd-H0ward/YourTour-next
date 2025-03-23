@@ -4,7 +4,7 @@
   margin-bottom: var(--mb, 0);
   max-width: var(--w, 100%);
 
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     max-width: 100%;
   }
 }

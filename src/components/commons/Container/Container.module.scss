@@ -6,8 +6,12 @@
 }
 
 .full {
-  max-width: 100%;
-  padding: 0 30px;
+  max-width: 1920px;
+  padding: 0 23px;
+
+  @media (max-width: 1024px) {
+    padding: 0 20px;
+  }
 }
 
 .small {

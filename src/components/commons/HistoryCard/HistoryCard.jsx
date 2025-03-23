@@ -24,7 +24,7 @@ const HistoryCard = ({ history }) => {
         align="stretch"
       >
         <Flex vertical>
-          <Title w={555} size="small" mb={37}>
+          <Title className={styles.title} w={555} size="small" mb={37}>
             {title}
           </Title>
           <Text w={555} mb={25}>
