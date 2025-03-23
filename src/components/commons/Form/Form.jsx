@@ -59,12 +59,14 @@ const Form = () => {
           gapY={33}
         >
           <Input
+            required
             label="Имя"
             placeholder="Введите Ваше имя"
             value={form.name}
             onChange={(e) => handleChange('name', e.target.value)}
           />
           <Select
+            required
             label="Направление"
             placeholder="Куда хотите ехать"
             items={destinations}
@@ -72,6 +74,7 @@ const Form = () => {
             onChange={(e) => handleChange('destination', e.target.value)}
           />
           <Input
+            required
             label="Email"
             type="email"
             placeholder="example@mail.com"
@@ -79,6 +82,7 @@ const Form = () => {
             onChange={(e) => handleChange('email', e.target.value)}
           />
           <Input
+            required
             label="Телефон"
             type="tel"
             placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
@@ -86,6 +90,7 @@ const Form = () => {
             onChange={(e) => handleChange('phone', e.target.value)}
           />
           <Input
+            required
             label="Дата от"
             type="date"
             placeholder="ДД.ММ.ГГГГ"
@@ -93,6 +98,7 @@ const Form = () => {
             onChange={(e) => handleChange('dateFrom', e.target.value)}
           />
           <Input
+            required
             label="Дата до"
             type="date"
             placeholder="ДД.ММ.ГГГГ"
@@ -102,6 +108,7 @@ const Form = () => {
           />
         </Grid>
         <Textarea
+          required
           label="Комментарий"
           value={form.comment}
           onChange={(e) => handleChange('comment', e.target.value)}
