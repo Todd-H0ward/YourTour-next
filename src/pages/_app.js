@@ -18,6 +18,7 @@ export default function App({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
+        <link rel="icon" href="/icons/favicon.svg" />
       </Head>
       <main className={roboto.className}>
         <Component {...pageProps} />
