@@ -1,9 +1,9 @@
-import tour1 from '@/assets/images/tours/photo-1.jpg';
-import tour2 from '@/assets/images/tours/photo-2.jpg';
-import tour3 from '@/assets/images/tours/photo-3.jpg';
-import tour4 from '@/assets/images/tours/photo-4.jpg';
-import tour5 from '@/assets/images/tours/photo-5.jpg';
-import tour6 from '@/assets/images/tours/photo-6.jpg';
+import tour1 from '../../public/tours/photo-1.jpg';
+import tour2 from '../../public/tours/photo-2.jpg';
+import tour3 from '../../public/tours/photo-3.jpg';
+import tour4 from '../../public/tours/photo-4.jpg';
+import tour5 from '../../public/tours/photo-5.jpg';
+import tour6 from '../../public/tours/photo-6.jpg';
 
 export const tours = [
   {

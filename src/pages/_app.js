@@ -1,4 +1,4 @@
-import '@/assets/styles/globals.scss';
+import '@/styles/globals.scss';
 import { Roboto } from 'next/font/google';
 import Head from 'next/head';
 
@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
-        <link rel="icon" href="/icons/favicon.svg" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <main className={roboto.className}>
         <Component {...pageProps} />

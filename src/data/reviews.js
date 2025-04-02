@@ -1,5 +1,5 @@
-import avatar1 from '@/assets/images/avatars/photo-1.jpg';
-import avatar2 from '@/assets/images/avatars/photo-2.jpg';
+import avatar1 from '../../public/avatars/photo-1.jpg';
+import avatar2 from '../../public/avatars/photo-2.jpg';
 
 export const reviews = [
   {

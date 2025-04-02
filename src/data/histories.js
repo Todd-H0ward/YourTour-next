@@ -1,6 +1,6 @@
-import history1 from '@/assets/images/history/story-1.jpg';
-import history2 from '@/assets/images/history/story-2.jpg';
-import history3 from '@/assets/images/history/story-3.jpg';
+import history1 from '../../public/history/story-1.jpg';
+import history2 from '../../public/history/story-2.jpg';
+import history3 from '../../public/history/story-3.jpg';
 
 export const histories = [
   {
