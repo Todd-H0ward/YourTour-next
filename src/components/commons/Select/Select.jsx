@@ -1,9 +1,9 @@
 'use client';
 
 import styles from './Select.module.scss';
-import Image from 'next/image';
 import { useState } from 'react';
 import clsx from 'clsx';
+import { DownArrow } from '@/components/icons';
 
 const Select = ({ label, placeholder, items, value, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,13 +30,7 @@ const Select = ({ label, placeholder, items, value, onChange }) => {
             </option>
           ))}
         </select>
-        <Image
-          className={clsx(styles.icon, isOpen && styles.open)}
-          src="/icons/select-icon.svg"
-          width={26}
-          height={26}
-          alt="icon"
-        />
+        <DownArrow className={clsx(styles.icon, isOpen && styles.open)} />
       </div>
     </label>
   );

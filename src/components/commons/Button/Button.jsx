@@ -1,6 +1,6 @@
 import styles from './Button.module.scss';
 import clsx from 'clsx';
-import Image from 'next/image';
+import { Arrow } from '@/components/icons';
 
 const variantClasses = {
   solid: styles.solid,
@@ -25,9 +25,7 @@ const Button = ({
   return (
     <button className={clsx(styles.btn, classes, className)} {...props}>
       {children}
-      {withIcon && (
-        <Image src="/icons/arrow-icon.svg" alt="arrow" width={24} height={26} />
-      )}
+      {withIcon && <Arrow />}
     </button>
   );
 };

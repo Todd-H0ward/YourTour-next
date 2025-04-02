@@ -1,5 +1,4 @@
 import { socialLinks } from '@/data/socialLinks';
-import Image from 'next/image';
 import styles from './Footer.module.scss';
 import Container from '@/components/commons/Container';
 import Flex from '@/components/commons/Flex';
@@ -20,7 +19,7 @@ const Footer = () => {
                 href={link.link}
                 target="_blank"
               >
-                <Image src={link.icon} alt={link.title} />
+                {link.icon}
                 <span className={styles.text}>{link.title}</span>
               </a>
             ))}

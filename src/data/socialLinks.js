@@ -1,21 +1,19 @@
-import tgIcon from '@/assets/images/icons/tg-icon.svg';
-import fbIcon from '@/assets/images/icons/fb-icon.svg';
-import vkIcon from '@/assets/images/icons/vk-icon.svg';
+import { Facebook, Telegram, Vk } from '@/components/icons';
 
 export const socialLinks = [
   {
     title: 'telegram',
     link: '#',
-    icon: tgIcon,
+    icon: <Telegram />,
   },
   {
     title: 'facebook',
     link: '#',
-    icon: fbIcon,
+    icon: <Facebook />,
   },
   {
     title: 'vkontakte',
     link: '#',
-    icon: vkIcon,
+    icon: <Vk />,
   },
 ];

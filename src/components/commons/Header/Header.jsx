@@ -3,11 +3,11 @@
 import Flex from '@/components/commons/Flex';
 import Link from 'next/link';
 import Menu from '@/components/commons/Menu';
-import Image from 'next/image';
 import styles from './Header.module.scss';
 import useScroll from '@/hooks/useScroll';
 import clsx from 'clsx';
 import Container from '@/components/commons/Container';
+import { Logo } from '@/components/icons';
 
 const menuItems = [
   {
@@ -36,13 +36,7 @@ const Header = () => {
       <Container className={styles.container}>
         <Flex justify="between" align="flex-start">
           <Link href="/">
-            <Image
-              className={styles.logo}
-              src="/icons/logo.svg"
-              width={182}
-              height={32}
-              alt="logo"
-            />
+            <Logo className={styles.logo} />
           </Link>
 
           <Menu className={styles.menu} items={menuItems} />
