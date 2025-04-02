@@ -17,7 +17,7 @@ const Info = () => {
         >
           <Image
             className={styles.image}
-            src="/images/info.jpg"
+            src="/info.jpg"
             alt="info"
             width={370}
             height={370}
