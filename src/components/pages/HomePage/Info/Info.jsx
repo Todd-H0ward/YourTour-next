@@ -1,10 +1,10 @@
-import Container from '@/components/commons/Container/Container';
-import Flex from '@/components/commons/Flex/Flex';
+import Container from '@/components/commons/Container';
+import Flex from '@/components/commons/Flex';
 import styles from './Info.module.scss';
 import Image from 'next/image';
-import Title from '@/components/commons/Title/Title';
-import Text from '@/components/commons/Text/Text';
-import Grid from '@/components/commons/Grid/Grid';
+import Title from '@/components/commons/Title';
+import Text from '@/components/commons/Text';
+import Grid from '@/components/commons/Grid';
 
 const Info = () => {
   return (

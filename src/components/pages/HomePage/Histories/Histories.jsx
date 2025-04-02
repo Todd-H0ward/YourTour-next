@@ -1,9 +1,9 @@
-import Container from '@/components/commons/Container/Container';
-import Title from '@/components/commons/Title/Title';
-import Text from '@/components/commons/Text/Text';
-import Flex from '@/components/commons/Flex/Flex';
+import Container from '@/components/commons/Container';
+import Title from '@/components/commons/Title';
+import Text from '@/components/commons/Text';
+import Flex from '@/components/commons/Flex';
 import { histories } from '@/data/histories';
-import HistoryCard from '@/components/commons/HistoryCard/HistoryCard';
+import HistoryCard from '@/components/commons/HistoryCard';
 import styles from './Histories.module.scss';
 
 const Histories = () => {

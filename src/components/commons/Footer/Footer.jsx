@@ -1,9 +1,9 @@
-import Text from '@/components/commons/Text/Text';
-import Flex from '@/components/commons/Flex/Flex';
-import Container from '@/components/commons/Container/Container';
 import { socialLinks } from '@/data/socialLinks';
 import Image from 'next/image';
 import styles from './Footer.module.scss';
+import Container from '@/components/commons/Container';
+import Flex from '@/components/commons/Flex';
+import Text from '@/components/commons/Text';
 
 const Footer = () => {
   return (

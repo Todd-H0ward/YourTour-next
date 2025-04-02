@@ -1,7 +1,7 @@
-import Title from '@/components/commons/Title/Title';
-import Text from '@/components/commons/Text/Text';
-import Flex from '@/components/commons/Flex/Flex';
-import Button from '@/components/commons/Button/Button';
+import Title from '@/components/commons/Title';
+import Text from '@/components/commons/Text';
+import Flex from '@/components/commons/Flex';
+import Button from '@/components/commons/Button';
 import Image from 'next/image';
 import styles from './HistoryCard.module.scss';
 

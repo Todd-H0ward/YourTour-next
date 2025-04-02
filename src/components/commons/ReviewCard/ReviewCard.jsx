@@ -1,6 +1,6 @@
-import Flex from '@/components/commons/Flex/Flex';
-import Title from '@/components/commons/Title/Title';
-import Text from '@/components/commons/Text/Text';
+import Flex from '@/components/commons/Flex';
+import Title from '@/components/commons/Title';
+import Text from '@/components/commons/Text';
 import Image from 'next/image';
 import styles from './ReviewCard.module.scss';
 

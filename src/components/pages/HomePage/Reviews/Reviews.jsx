@@ -1,9 +1,9 @@
-import Container from '@/components/commons/Container/Container';
-import Title from '@/components/commons/Title/Title';
-import Flex from '@/components/commons/Flex/Flex';
-import Grid from '@/components/commons/Grid/Grid';
-import ReviewCard from '@/components/commons/ReviewCard/ReviewCard';
-import Text from '@/components/commons/Text/Text';
+import Container from '@/components/commons/Container';
+import Title from '@/components/commons/Title';
+import Flex from '@/components/commons/Flex';
+import Grid from '@/components/commons/Grid';
+import ReviewCard from '@/components/commons/ReviewCard';
+import Text from '@/components/commons/Text';
 import { reviews } from '@/data/reviews';
 import styles from './Reviews.module.scss';
 

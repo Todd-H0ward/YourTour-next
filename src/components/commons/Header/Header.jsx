@@ -1,13 +1,13 @@
 'use client';
 
-import Flex from '@/components/commons/Flex/Flex';
+import Flex from '@/components/commons/Flex';
 import Link from 'next/link';
-import Menu from '@/components/commons/Menu/Menu';
+import Menu from '@/components/commons/Menu';
 import Image from 'next/image';
 import styles from './Header.module.scss';
 import useScroll from '@/hooks/useScroll';
 import clsx from 'clsx';
-import Container from '@/components/commons/Container/Container';
+import Container from '@/components/commons/Container';
 
 const menuItems = [
   {

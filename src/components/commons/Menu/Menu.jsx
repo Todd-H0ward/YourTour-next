@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Flex from '@/components/commons/Flex/Flex';
+import Flex from '@/components/commons/Flex';
 import styles from './Menu.module.scss';
 import clsx from 'clsx';
 

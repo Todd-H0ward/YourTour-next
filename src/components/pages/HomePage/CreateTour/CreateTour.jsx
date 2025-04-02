@@ -1,8 +1,8 @@
-import Title from '@/components/commons/Title/Title';
-import Text from '@/components/commons/Text/Text';
-import Flex from '@/components/commons/Flex/Flex';
-import Form from '@/components/commons/Form/Form';
-import Container from '@/components/commons/Container/Container';
+import Title from '@/components/commons/Title';
+import Text from '@/components/commons/Text';
+import Flex from '@/components/commons/Flex';
+import Form from '@/components/commons/Form';
+import Container from '@/components/commons/Container';
 import styles from './CreateTour.module.scss';
 
 const CreateTour = () => {

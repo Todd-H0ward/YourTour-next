@@ -1,5 +1,5 @@
 import styles from './Tabs.module.scss';
-import Flex from '@/components/commons/Flex/Flex';
+import Flex from '@/components/commons/Flex';
 import { useState } from 'react';
 import clsx from 'clsx';
 
