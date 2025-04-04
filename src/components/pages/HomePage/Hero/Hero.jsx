@@ -1,8 +1,9 @@
-import Flex from '@/components/commons/Flex';
-import Title from '@/components/commons/Title';
 import Button from '@/components/commons/Button';
-import Text from '@/components/commons/Text';
 import Container from '@/components/commons/Container';
+import Flex from '@/components/commons/Flex';
+import Text from '@/components/commons/Text';
+import Title from '@/components/commons/Title';
+
 import styles from './Hero.module.scss';
 
 const Hero = () => {

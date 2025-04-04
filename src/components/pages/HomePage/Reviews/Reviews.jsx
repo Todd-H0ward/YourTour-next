@@ -1,11 +1,14 @@
 import Container from '@/components/commons/Container';
-import Title from '@/components/commons/Title';
 import Flex from '@/components/commons/Flex';
 import Grid from '@/components/commons/Grid';
 import ReviewCard from '@/components/commons/ReviewCard';
 import Text from '@/components/commons/Text';
-import { reviews } from '@/data/reviews';
+import Title from '@/components/commons/Title';
+
 import styles from './Reviews.module.scss';
+
+import { reviews } from '@/data/reviews';
+
 
 const Reviews = () => {
   return (

@@ -1,7 +1,9 @@
-import Link from 'next/link';
-import Flex from '@/components/commons/Flex';
-import styles from './Menu.module.scss';
 import clsx from 'clsx';
+import Link from 'next/link';
+
+import Flex from '@/components/commons/Flex';
+
+import styles from './Menu.module.scss';
 
 const Menu = ({ items, className }) => {
   return (

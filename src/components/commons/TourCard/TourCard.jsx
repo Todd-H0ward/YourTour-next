@@ -1,9 +1,12 @@
-import styles from './TourCard.module.scss';
-import Title from '@/components/commons/Title';
-import Text from '@/components/commons/Text';
+import Image from 'next/image';
+
 import Button from '@/components/commons/Button';
 import Flex from '@/components/commons/Flex';
-import Image from 'next/image';
+import Text from '@/components/commons/Text';
+import Title from '@/components/commons/Title';
+
+import styles from './TourCard.module.scss';
+
 
 const TourCard = ({ tour }) => {
   return (

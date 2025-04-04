@@ -1,4 +1,8 @@
 import photo1 from '../../public/photos/travel-1.jpg';
+import photo10 from '../../public/photos/travel-10.jpg';
+import photo11 from '../../public/photos/travel-11.jpg';
+import photo12 from '../../public/photos/travel-12.jpg';
+import photo13 from '../../public/photos/travel-13.jpg';
 import photo2 from '../../public/photos/travel-2.jpg';
 import photo3 from '../../public/photos/travel-3.jpg';
 import photo4 from '../../public/photos/travel-4.jpg';
@@ -6,11 +10,7 @@ import photo5 from '../../public/photos/travel-5.jpg';
 import photo6 from '../../public/photos/travel-6.jpg';
 import photo7 from '../../public/photos/travel-7.jpg';
 import photo8 from '../../public/photos/travel-8.jpg';
-import photo9 from '../../public/photos/travel-1.jpg';
-import photo10 from '../../public/photos/travel-10.jpg';
-import photo11 from '../../public/photos/travel-11.jpg';
-import photo12 from '../../public/photos/travel-12.jpg';
-import photo13 from '../../public/photos/travel-13.jpg';
+import photo9 from '../../public/photos/travel-9.jpg';
 
 export const photos = [
   { id: 1, image: photo1, alt: 'photo1' },

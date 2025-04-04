@@ -1,5 +1,6 @@
-import styles from './Container.module.scss';
 import clsx from 'clsx';
+
+import styles from './Container.module.scss';
 
 const Container = ({
   fullWidth = false,

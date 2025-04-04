@@ -1,7 +1,9 @@
-import styles from './Tabs.module.scss';
-import Flex from '@/components/commons/Flex';
-import { useState } from 'react';
 import clsx from 'clsx';
+import { useState } from 'react';
+
+import Flex from '@/components/commons/Flex';
+
+import styles from './Tabs.module.scss';
 
 const Tabs = ({ items, className }) => {
   const [activeTab, setActiveTab] = useState(1);

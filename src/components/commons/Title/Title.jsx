@@ -1,6 +1,7 @@
-import { createElement } from 'react';
-import styles from './Title.module.scss';
 import clsx from 'clsx';
+import { createElement } from 'react';
+
+import styles from './Title.module.scss';
 
 const sizeClasses = {
   big: styles.big,

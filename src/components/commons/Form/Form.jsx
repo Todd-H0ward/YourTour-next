@@ -1,17 +1,22 @@
 'use client';
 
+import { useState } from 'react';
+
+import Button from '@/components/commons/Button';
+import Checkbox from '@/components/commons/Checkbox';
+import Flex from '@/components/commons/Flex';
 import Grid from '@/components/commons/Grid';
 import Input from '@/components/commons/Input';
-import styles from './Form.module.scss';
-import Flex from '@/components/commons/Flex';
-import Button from '@/components/commons/Button';
-import Select from '@/components/commons/Select';
-import Textarea from '@/components/commons/Textarea';
-import Text from '@/components/commons/Text';
 import Radio from '@/components/commons/Radio';
-import Checkbox from '@/components/commons/Checkbox';
+import Select from '@/components/commons/Select';
+import Text from '@/components/commons/Text';
+import Textarea from '@/components/commons/Textarea';
+
+import styles from './Form.module.scss';
+
+
 import { destinations } from '@/data/destinations';
-import { useState } from 'react';
+
 
 const Form = () => {
   const [form, setForm] = useState({

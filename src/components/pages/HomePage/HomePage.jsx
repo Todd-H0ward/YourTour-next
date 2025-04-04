@@ -1,11 +1,12 @@
 import Layout from '@/components/commons/Layout';
-import Hero from '@/components/pages/HomePage/Hero';
-import Tours from '@/components/pages/HomePage/Tours';
 import CreateTour from '@/components/pages/HomePage/CreateTour';
-import Reviews from '@/components/pages/HomePage/Reviews';
-import Photos from '@/components/pages/HomePage/Photos';
+import Hero from '@/components/pages/HomePage/Hero';
 import Histories from '@/components/pages/HomePage/Histories';
 import Info from '@/components/pages/HomePage/Info';
+import Photos from '@/components/pages/HomePage/Photos';
+import Reviews from '@/components/pages/HomePage/Reviews';
+import Tours from '@/components/pages/HomePage/Tours';
+
 import styles from './HomePage.module.scss';
 
 const HomePage = () => {

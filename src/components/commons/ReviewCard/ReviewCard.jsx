@@ -1,7 +1,9 @@
-import Flex from '@/components/commons/Flex';
-import Title from '@/components/commons/Title';
-import Text from '@/components/commons/Text';
 import Image from 'next/image';
+
+import Flex from '@/components/commons/Flex';
+import Text from '@/components/commons/Text';
+import Title from '@/components/commons/Title';
+
 import styles from './ReviewCard.module.scss';
 
 const ReviewCard = ({ review }) => {

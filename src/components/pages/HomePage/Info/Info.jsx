@@ -1,10 +1,13 @@
+import Image from 'next/image';
+
 import Container from '@/components/commons/Container';
 import Flex from '@/components/commons/Flex';
-import styles from './Info.module.scss';
-import Image from 'next/image';
-import Title from '@/components/commons/Title';
-import Text from '@/components/commons/Text';
 import Grid from '@/components/commons/Grid';
+import Text from '@/components/commons/Text';
+import Title from '@/components/commons/Title';
+
+import styles from './Info.module.scss';
+
 
 const Info = () => {
   return (

@@ -1,5 +1,6 @@
-import styles from './Flex.module.scss';
 import clsx from 'clsx';
+
+import styles from './Flex.module.scss';
 
 const alignClasses = {
   start: styles.alignStart,

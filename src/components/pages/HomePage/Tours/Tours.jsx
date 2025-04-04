@@ -1,10 +1,13 @@
-import styles from './Tours.module.scss';
-import Title from '@/components/commons/Title';
-import Tabs from '@/components/commons/Tabs';
-import { tours } from '@/data/tours';
-import TourCard from '@/components/commons/TourCard';
-import Grid from '@/components/commons/Grid';
 import Container from '@/components/commons/Container';
+import Grid from '@/components/commons/Grid';
+import Tabs from '@/components/commons/Tabs';
+import Title from '@/components/commons/Title';
+import TourCard from '@/components/commons/TourCard';
+
+import styles from './Tours.module.scss';
+
+import { tours } from '@/data/tours';
+
 
 const tabsItems = [
   {

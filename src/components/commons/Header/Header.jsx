@@ -1,13 +1,16 @@
 'use client';
 
-import Flex from '@/components/commons/Flex';
-import Link from 'next/link';
-import Menu from '@/components/commons/Menu';
-import styles from './Header.module.scss';
-import useScroll from '@/hooks/useScroll';
 import clsx from 'clsx';
+import Link from 'next/link';
+
 import Container from '@/components/commons/Container';
+import Flex from '@/components/commons/Flex';
+import Menu from '@/components/commons/Menu';
 import { Logo } from '@/components/icons';
+
+import useScroll from '@/hooks/useScroll';
+
+import styles from './Header.module.scss';
 
 const menuItems = [
   {

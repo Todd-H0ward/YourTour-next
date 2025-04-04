@@ -1,8 +1,10 @@
-import { socialLinks } from '@/data/socialLinks';
-import styles from './Footer.module.scss';
 import Container from '@/components/commons/Container';
 import Flex from '@/components/commons/Flex';
 import Text from '@/components/commons/Text';
+
+import styles from './Footer.module.scss';
+
+import { socialLinks } from '@/data/socialLinks';
 
 const Footer = () => {
   return (

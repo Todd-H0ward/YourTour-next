@@ -1,6 +1,8 @@
-import styles from './Checkbox.module.scss';
 import clsx from 'clsx';
+
 import { CheckboxArrow } from '@/components/icons';
+
+import styles from './Checkbox.module.scss';
 
 const Checkbox = ({ label, checked, onChange, className }) => {
   return (

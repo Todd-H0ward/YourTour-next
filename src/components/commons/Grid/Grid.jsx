@@ -1,5 +1,6 @@
-import styles from './Grid.module.scss';
 import clsx from 'clsx';
+
+import styles from './Grid.module.scss';
 
 const Grid = ({
   gap = 0,

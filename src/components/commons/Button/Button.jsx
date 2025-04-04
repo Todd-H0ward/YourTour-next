@@ -1,6 +1,8 @@
-import styles from './Button.module.scss';
 import clsx from 'clsx';
+
 import { Arrow } from '@/components/icons';
+
+import styles from './Button.module.scss';
 
 const variantClasses = {
   solid: styles.solid,

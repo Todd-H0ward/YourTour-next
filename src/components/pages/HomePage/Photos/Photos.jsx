@@ -1,11 +1,15 @@
-import Flex from '@/components/commons/Flex';
-import Title from '@/components/commons/Title';
-import Text from '@/components/commons/Text';
-import Grid from '@/components/commons/Grid';
-import { photos } from '@/data/photos';
 import Image from 'next/image';
+
 import Container from '@/components/commons/Container';
+import Flex from '@/components/commons/Flex';
+import Grid from '@/components/commons/Grid';
+import Text from '@/components/commons/Text';
+import Title from '@/components/commons/Title';
+
 import styles from './Photos.module.scss';
+
+import { photos } from '@/data/photos';
+
 
 const Photos = () => {
   return (

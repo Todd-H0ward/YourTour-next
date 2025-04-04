@@ -1,8 +1,11 @@
-import Title from '@/components/commons/Title';
-import Text from '@/components/commons/Text';
-import Flex from '@/components/commons/Flex';
-import Button from '@/components/commons/Button';
 import Image from 'next/image';
+
+import Button from '@/components/commons/Button';
+import Flex from '@/components/commons/Flex';
+import Text from '@/components/commons/Text';
+import Title from '@/components/commons/Title';
+
+
 import styles from './HistoryCard.module.scss';
 
 const HistoryCard = ({ history }) => {

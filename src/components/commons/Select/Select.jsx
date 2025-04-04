@@ -1,9 +1,11 @@
 'use client';
 
-import styles from './Select.module.scss';
-import { useState } from 'react';
 import clsx from 'clsx';
+import { useState } from 'react';
+
 import { DownArrow } from '@/components/icons';
+
+import styles from './Select.module.scss';
 
 const Select = ({ label, placeholder, items, value, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);

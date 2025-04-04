@@ -1,10 +1,12 @@
 import Container from '@/components/commons/Container';
-import Title from '@/components/commons/Title';
-import Text from '@/components/commons/Text';
 import Flex from '@/components/commons/Flex';
-import { histories } from '@/data/histories';
 import HistoryCard from '@/components/commons/HistoryCard';
+import Text from '@/components/commons/Text';
+import Title from '@/components/commons/Title';
+
 import styles from './Histories.module.scss';
+
+import { histories } from '@/data/histories';
 
 const Histories = () => {
   return (

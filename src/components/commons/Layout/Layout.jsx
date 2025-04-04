@@ -1,7 +1,9 @@
-import Header from '@/components/commons/Header';
-import styles from './Layout.module.scss';
-import Footer from '@/components/commons/Footer';
 import clsx from 'clsx';
+
+import Footer from '@/components/commons/Footer';
+import Header from '@/components/commons/Header';
+
+import styles from './Layout.module.scss';
 
 const Layout = ({ children, className }) => {
   return (

@@ -1,5 +1,6 @@
-import styles from './Text.module.scss';
 import clsx from 'clsx';
+
+import styles from './Text.module.scss';
 
 const sizeClasses = {
   big: styles.big,

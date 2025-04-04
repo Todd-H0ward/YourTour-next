@@ -1,5 +1,6 @@
-import styles from './Input.module.scss';
 import clsx from 'clsx';
+
+import styles from './Input.module.scss';
 
 const Input = ({ value, onChange, label, type = 'text', ...props }) => {
   return (
