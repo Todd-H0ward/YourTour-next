@@ -26,16 +26,16 @@ const Flex = ({
   children,
   className,
 }) => {
-  const classes = [
-    alignClasses[align],
-    justifyClasses[justify],
-    vertical && styles.vertical,
-    wrap && styles.wrap,
-  ];
-
   return (
     <div
-      className={clsx(styles.flex, classes, className)}
+      className={clsx(
+        styles.flex,
+        alignClasses[align],
+        justifyClasses[justify],
+        vertical && styles.vertical,
+        wrap && styles.wrap,
+        className,
+      )}
       style={{
         '--gap': `${gap}px`,
         '--gap-y': `${gapY}px`,

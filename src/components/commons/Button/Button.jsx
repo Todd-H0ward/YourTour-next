@@ -18,14 +18,17 @@ const Button = ({
   className,
   ...props
 }) => {
-  const classes = [
-    variantClasses[variant],
-    withIcon && styles.withIcon,
-    small && styles.small,
-  ];
-
   return (
-    <button className={clsx(styles.btn, classes, className)} {...props}>
+    <button
+      className={clsx(
+        styles.btn,
+        variantClasses[variant],
+        withIcon && styles.withIcon,
+        small && styles.small,
+        className,
+      )}
+      {...props}
+    >
       {children}
       {withIcon && <Arrow />}
     </button>
