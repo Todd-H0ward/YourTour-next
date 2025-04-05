@@ -35,8 +35,8 @@ const HistoryCard = ({ history }) => {
           </Text>
           {advantages && (
             <ul className={styles.list}>
-              {advantages.map((advantage, index) => (
-                <li key={index}>{advantage}</li>
+              {advantages.map((advantage) => (
+                <li key={advantage}>{advantage}</li>
               ))}
             </ul>
           )}
@@ -47,8 +47,8 @@ const HistoryCard = ({ history }) => {
           </Button>
           <Flex className={styles.links} gap={36}>
             {socials &&
-              socials.map((social, index) => (
-                <a key={index} className={styles.link} href={social.url}>
+              socials.map((social) => (
+                <a key={social.type} className={styles.link} href={social.url}>
                   {social.type}
                 </a>
               ))}

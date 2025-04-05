@@ -18,8 +18,8 @@ const ReviewCard = ({ review }) => {
         gap={70}
       >
         <Flex className={styles.comment} vertical gap={28}>
-          {review.comment.split('\n').map((text, index) => (
-            <Text key={index} size="big" align="left">
+          {review.comment.split('\n').map((text) => (
+            <Text key={text} size="big" align="left">
               {text}
             </Text>
           ))}
