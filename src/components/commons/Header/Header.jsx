@@ -34,8 +34,10 @@ const menuItems = [
 const Header = () => {
   const { scrollY } = useScroll();
 
+  const isStickyHeader = scrollY > 450;
+
   return (
-    <header className={clsx(styles.header, scrollY > 450 && styles.fixed)}>
+    <header className={clsx(styles.header, isStickyHeader && styles.fixed)}>
       <Container className={styles.container}>
         <Flex justify="between" align="flex-start">
           <Link href="/">
