@@ -1,10 +1,10 @@
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 
 import Button from '@/components/commons/Button';
 import Flex from '@/components/commons/Flex';
 import Text from '@/components/commons/Text';
 import Title from '@/components/commons/Title';
-
 
 import styles from './HistoryCard.module.scss';
 
@@ -57,6 +57,22 @@ const HistoryCard = ({ history }) => {
       </Flex>
     </div>
   );
+};
+
+HistoryCard.propTypes = {
+  history: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    advantages: PropTypes.arrayOf(PropTypes.string),
+    socials: PropTypes.arrayOf(
+      PropTypes.shape({
+        type: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+      }),
+    ),
+    image: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default HistoryCard;

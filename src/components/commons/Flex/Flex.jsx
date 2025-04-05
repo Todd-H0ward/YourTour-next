@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import PropTypes from 'prop-types';
 
 import styles from './Flex.module.scss';
 
@@ -44,6 +45,17 @@ const Flex = ({
       {children}
     </div>
   );
+};
+
+Flex.propTypes = {
+  vertical: PropTypes.bool,
+  align: PropTypes.oneOf(['start', 'end', 'center', 'stretch']),
+  justify: PropTypes.oneOf(['start', 'end', 'center', 'between']),
+  wrap: PropTypes.bool,
+  gap: PropTypes.number,
+  gapY: PropTypes.number,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 export default Flex;

@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 import Flex from '@/components/commons/Flex';
@@ -31,6 +32,16 @@ const Tabs = ({ items, className }) => {
       ))}
     </Flex>
   );
+};
+
+Tabs.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  className: PropTypes.string,
 };
 
 export default Tabs;

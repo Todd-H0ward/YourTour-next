@@ -1,6 +1,7 @@
 'use client';
 
 import clsx from 'clsx';
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 import { DownArrow } from '@/components/icons';
@@ -36,6 +37,14 @@ const Select = ({ label, placeholder, items, value, onChange }) => {
       </div>
     </label>
   );
+};
+
+Select.propTypes = {
+  label: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default Select;

@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import PropTypes from 'prop-types';
 
 import { Arrow } from '@/components/icons';
 
@@ -33,6 +34,14 @@ const Button = ({
       {withIcon && <Arrow />}
     </button>
   );
+};
+
+Button.propTypes = {
+  variant: PropTypes.oneOf(['solid', 'filled', 'link']),
+  withIcon: PropTypes.bool,
+  small: PropTypes.bool,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 export default Button;

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Telegram = ({ className }) => {
   return (
     <svg
@@ -14,6 +16,10 @@ const Telegram = ({ className }) => {
       />
     </svg>
   );
+};
+
+Telegram.propTypes = {
+  className: PropTypes.string,
 };
 
 export default Telegram;

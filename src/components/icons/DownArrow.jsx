@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const DownArrow = ({ className }) => {
   return (
     <svg
@@ -16,6 +18,10 @@ const DownArrow = ({ className }) => {
       />
     </svg>
   );
+};
+
+DownArrow.propTypes = {
+  className: PropTypes.string,
 };
 
 export default DownArrow;

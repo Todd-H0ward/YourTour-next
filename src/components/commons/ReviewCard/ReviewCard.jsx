@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 
 import Flex from '@/components/commons/Flex';
 import Text from '@/components/commons/Text';
@@ -41,6 +42,16 @@ const ReviewCard = ({ review }) => {
       </Flex>
     </div>
   );
+};
+
+ReviewCard.propTypes = {
+  review: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    tour: PropTypes.string.isRequired,
+    comment: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default ReviewCard;

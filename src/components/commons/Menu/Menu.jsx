@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 
 import Flex from '@/components/commons/Flex';
 
@@ -17,6 +18,16 @@ const Menu = ({ items, className }) => {
       </Flex>
     </nav>
   );
+};
+
+Menu.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      href: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  className: PropTypes.string,
 };
 
 export default Menu;

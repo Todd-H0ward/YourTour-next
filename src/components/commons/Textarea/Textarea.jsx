@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from './Textarea.module.scss';
 
 const Textarea = ({ value, onChange, label, ...props }) => {
@@ -12,6 +14,12 @@ const Textarea = ({ value, onChange, label, ...props }) => {
       />
     </label>
   );
+};
+
+Textarea.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  label: PropTypes.string.isRequired,
 };
 
 export default Textarea;

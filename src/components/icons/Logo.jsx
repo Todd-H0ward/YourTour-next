@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Logo = ({ className }) => {
   return (
     <svg
@@ -42,6 +44,10 @@ const Logo = ({ className }) => {
       />
     </svg>
   );
+};
+
+Logo.propTypes = {
+  className: PropTypes.string,
 };
 
 export default Logo;

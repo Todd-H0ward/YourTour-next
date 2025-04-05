@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 
 import Button from '@/components/commons/Button';
 import Flex from '@/components/commons/Flex';
@@ -6,7 +7,6 @@ import Text from '@/components/commons/Text';
 import Title from '@/components/commons/Title';
 
 import styles from './TourCard.module.scss';
-
 
 const TourCard = ({ tour }) => {
   return (
@@ -31,6 +31,17 @@ const TourCard = ({ tour }) => {
       </Flex>
     </div>
   );
+};
+
+TourCard.propTypes = {
+  tour: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    image: PropTypes.shape({
+      src: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default TourCard;

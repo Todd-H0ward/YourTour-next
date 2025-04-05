@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const CheckboxArrow = ({ className }) => {
   return (
     <svg
@@ -17,6 +19,10 @@ const CheckboxArrow = ({ className }) => {
       />
     </svg>
   );
+};
+
+CheckboxArrow.propTypes = {
+  className: PropTypes.string,
 };
 
 export default CheckboxArrow;

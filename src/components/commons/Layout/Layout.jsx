@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import PropTypes from 'prop-types';
 
 import Footer from '@/components/commons/Footer';
 import Header from '@/components/commons/Header';
@@ -13,6 +14,11 @@ const Layout = ({ children, className }) => {
       <Footer />
     </div>
   );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 export default Layout;

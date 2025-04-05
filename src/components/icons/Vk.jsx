@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Vk = ({ className }) => {
   return (
     <svg
@@ -19,6 +21,10 @@ const Vk = ({ className }) => {
       </g>
     </svg>
   );
+};
+
+Vk.propTypes = {
+  className: PropTypes.string,
 };
 
 export default Vk;

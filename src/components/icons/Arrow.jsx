@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Arrow = ({ className }) => {
   return (
     <svg
@@ -14,6 +16,10 @@ const Arrow = ({ className }) => {
       />
     </svg>
   );
+};
+
+Arrow.propTypes = {
+  className: PropTypes.string,
 };
 
 export default Arrow;
