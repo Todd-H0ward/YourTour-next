@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 
@@ -8,7 +7,7 @@ import styles from './Menu.module.scss';
 
 const Menu = ({ items, className }) => {
   return (
-    <nav className={clsx(styles.menu, className)}>
+    <nav className={className}>
       <Flex className={styles.list} gap={50}>
         {items.map((item) => (
           <Link key={item.title} href={item.href} className={styles.link}>
