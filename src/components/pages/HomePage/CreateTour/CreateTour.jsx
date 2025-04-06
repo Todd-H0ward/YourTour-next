@@ -1,6 +1,7 @@
 import Container from '@/components/commons/Container';
 import Flex from '@/components/commons/Flex';
 import Form from '@/components/commons/Form';
+import Section from '@/components/commons/Section';
 import Text from '@/components/commons/Text';
 import Title from '@/components/commons/Title';
 
@@ -8,7 +9,7 @@ import styles from './CreateTour.module.scss';
 
 const CreateTour = () => {
   return (
-    <section id="create">
+    <Section id="create">
       <Container>
         <Flex vertical align="center">
           <Title align="center">Собери свой тур</Title>
@@ -19,7 +20,7 @@ const CreateTour = () => {
           <Form />
         </Flex>
       </Container>
-    </section>
+    </Section>
   );
 };
 

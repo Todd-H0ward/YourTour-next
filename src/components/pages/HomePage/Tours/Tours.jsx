@@ -1,5 +1,6 @@
 import Container from '@/components/commons/Container';
 import Grid from '@/components/commons/Grid';
+import Section from '@/components/commons/Section';
 import Tabs from '@/components/commons/Tabs';
 import Title from '@/components/commons/Title';
 import TourCard from '@/components/commons/TourCard';
@@ -7,7 +8,6 @@ import TourCard from '@/components/commons/TourCard';
 import styles from './Tours.module.scss';
 
 import { tours } from '@/data/tours';
-
 
 const tabsItems = [
   {
@@ -34,7 +34,7 @@ const tabsItems = [
 
 const Tours = () => {
   return (
-    <section id="tours">
+    <Section id="tours">
       <Container>
         <Title className={styles.title} mb={35} size="normal" align="center">
           Выбери свой тур
@@ -47,7 +47,7 @@ const Tours = () => {
           ))}
         </Grid>
       </Container>
-    </section>
+    </Section>
   );
 };
 

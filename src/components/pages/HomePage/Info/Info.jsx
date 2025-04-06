@@ -3,15 +3,15 @@ import Image from 'next/image';
 import Container from '@/components/commons/Container';
 import Flex from '@/components/commons/Flex';
 import Grid from '@/components/commons/Grid';
+import Section from '@/components/commons/Section';
 import Text from '@/components/commons/Text';
 import Title from '@/components/commons/Title';
 
 import styles from './Info.module.scss';
 
-
 const Info = () => {
   return (
-    <section>
+    <Section>
       <Container small>
         <Grid
           className={styles.container}
@@ -38,7 +38,7 @@ const Info = () => {
           </Flex>
         </Grid>
       </Container>
-    </section>
+    </Section>
   );
 };
 

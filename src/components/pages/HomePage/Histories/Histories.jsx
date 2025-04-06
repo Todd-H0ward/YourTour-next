@@ -1,6 +1,7 @@
 import Container from '@/components/commons/Container';
 import Flex from '@/components/commons/Flex';
 import HistoryCard from '@/components/commons/HistoryCard';
+import Section from '@/components/commons/Section';
 import Text from '@/components/commons/Text';
 import Title from '@/components/commons/Title';
 
@@ -10,7 +11,7 @@ import { histories } from '@/data/histories';
 
 const Histories = () => {
   return (
-    <section id="histories">
+    <Section id="histories">
       <Container>
         <Flex vertical align="center">
           <Title align="center" mb={30}>
@@ -28,7 +29,7 @@ const Histories = () => {
           </Flex>
         </Flex>
       </Container>
-    </section>
+    </Section>
   );
 };
 

@@ -2,6 +2,7 @@ import Container from '@/components/commons/Container';
 import Flex from '@/components/commons/Flex';
 import Grid from '@/components/commons/Grid';
 import ReviewCard from '@/components/commons/ReviewCard';
+import Section from '@/components/commons/Section';
 import Text from '@/components/commons/Text';
 import Title from '@/components/commons/Title';
 
@@ -9,10 +10,9 @@ import styles from './Reviews.module.scss';
 
 import { reviews } from '@/data/reviews';
 
-
 const Reviews = () => {
   return (
-    <section id="reviews">
+    <Section id="reviews">
       <Container>
         <Flex vertical align="center">
           <Title w={530} align="center">
@@ -29,7 +29,7 @@ const Reviews = () => {
           </Grid>
         </Flex>
       </Container>
-    </section>
+    </Section>
   );
 };
 

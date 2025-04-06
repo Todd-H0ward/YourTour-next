@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Container from '@/components/commons/Container';
 import Flex from '@/components/commons/Flex';
 import Grid from '@/components/commons/Grid';
+import Section from '@/components/commons/Section';
 import Text from '@/components/commons/Text';
 import Title from '@/components/commons/Title';
 
@@ -10,10 +11,9 @@ import styles from './Photos.module.scss';
 
 import { photos } from '@/data/photos';
 
-
 const Photos = () => {
   return (
-    <section>
+    <Section>
       <Container fullWidth>
         <Flex vertical align="center">
           <Title align="center">Фотографии путешествий</Title>
@@ -40,7 +40,7 @@ const Photos = () => {
           </Grid>
         </Flex>
       </Container>
-    </section>
+    </Section>
   );
 };
 

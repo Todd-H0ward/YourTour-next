@@ -1,6 +1,7 @@
 import Button from '@/components/commons/Button';
 import Container from '@/components/commons/Container';
 import Flex from '@/components/commons/Flex';
+import Section from '@/components/commons/Section';
 import Text from '@/components/commons/Text';
 import Title from '@/components/commons/Title';
 
@@ -8,7 +9,7 @@ import styles from './Hero.module.scss';
 
 const Hero = () => {
   return (
-    <section className={styles.hero}>
+    <Section className={styles.hero}>
       <Container>
         <Flex className={styles.content} vertical align="center" gap={50}>
           <Title className={styles.title} mb={0} size="big" align="center">
@@ -21,7 +22,7 @@ const Hero = () => {
           <Button small>Найти тур</Button>
         </Flex>
       </Container>
-    </section>
+    </Section>
   );
 };
 
