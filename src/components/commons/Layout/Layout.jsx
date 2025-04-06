@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import PropTypes from 'prop-types';
+import { node, string } from 'prop-types';
 
 import Footer from '@/components/commons/Footer';
 import Header from '@/components/commons/Header';
@@ -17,8 +17,8 @@ const Layout = ({ children, className }) => {
 };
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
+  children: node.isRequired,
+  className: string,
 };
 
 export default Layout;

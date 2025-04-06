@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { func, string } from 'prop-types';
 
 import styles from './Textarea.module.scss';
 
@@ -17,9 +17,9 @@ const Textarea = ({ value, onChange, label, ...props }) => {
 };
 
 Textarea.propTypes = {
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  label: PropTypes.string.isRequired,
+  value: string.isRequired,
+  onChange: func.isRequired,
+  label: string.isRequired,
 };
 
 export default Textarea;

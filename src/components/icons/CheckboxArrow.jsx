@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 
 const CheckboxArrow = ({ className }) => {
   return (
@@ -22,7 +22,7 @@ const CheckboxArrow = ({ className }) => {
 };
 
 CheckboxArrow.propTypes = {
-  className: PropTypes.string,
+  className: string,
 };
 
 export default CheckboxArrow;

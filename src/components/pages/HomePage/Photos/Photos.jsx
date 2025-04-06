@@ -29,7 +29,7 @@ const Photos = () => {
             {photos.map((photo) => (
               <div key={photo.id} className={styles.wrapper}>
                 <Image
-                  src={photo.image.src}
+                  src={photo.image}
                   width={444}
                   height={301}
                   alt={photo.alt}

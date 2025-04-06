@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import PropTypes from 'prop-types';
+import { arrayOf, shape, string } from 'prop-types';
 
 import Flex from '@/components/commons/Flex';
 
@@ -20,13 +20,13 @@ const Menu = ({ items, className }) => {
 };
 
 Menu.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired,
+  items: arrayOf(
+    shape({
+      title: string.isRequired,
+      href: string.isRequired,
     }),
   ).isRequired,
-  className: PropTypes.string,
+  className: string,
 };
 
 export default Menu;

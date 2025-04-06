@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 
 const Vk = ({ className }) => {
   return (
@@ -24,7 +24,7 @@ const Vk = ({ className }) => {
 };
 
 Vk.propTypes = {
-  className: PropTypes.string,
+  className: string,
 };
 
 export default Vk;

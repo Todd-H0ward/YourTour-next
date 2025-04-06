@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import PropTypes from 'prop-types';
+import { bool, func, string } from 'prop-types';
 
 import { CheckboxArrow } from '@/components/icons';
 
@@ -25,10 +25,10 @@ const Checkbox = ({ label, checked, onChange, className }) => {
 };
 
 Checkbox.propTypes = {
-  label: PropTypes.string.isRequired,
-  checked: PropTypes.bool.isRequired,
-  onChange: PropTypes.func.isRequired,
-  className: PropTypes.string,
+  label: string.isRequired,
+  checked: bool.isRequired,
+  onChange: func.isRequired,
+  className: string,
 };
 
 export default Checkbox;

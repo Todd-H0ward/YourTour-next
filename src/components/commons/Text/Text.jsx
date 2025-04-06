@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import PropTypes from 'prop-types';
+import { node, number, oneOf, string } from 'prop-types';
 
 import styles from './Text.module.scss';
 
@@ -41,12 +41,12 @@ const Text = ({
 };
 
 Text.propTypes = {
-  align: PropTypes.oneOf(['left', 'center']),
-  size: PropTypes.oneOf(['big', 'normal', 'small']),
-  mb: PropTypes.number,
-  w: PropTypes.number,
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
+  align: oneOf(['left', 'center']),
+  size: oneOf(['big', 'normal', 'small']),
+  mb: number,
+  w: number,
+  children: node.isRequired,
+  className: string,
 };
 
 export default Text;

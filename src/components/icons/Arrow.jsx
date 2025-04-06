@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 
 const Arrow = ({ className }) => {
   return (
@@ -19,7 +19,7 @@ const Arrow = ({ className }) => {
 };
 
 Arrow.propTypes = {
-  className: PropTypes.string,
+  className: string,
 };
 
 export default Arrow;

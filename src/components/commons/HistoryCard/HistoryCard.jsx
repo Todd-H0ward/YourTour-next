@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import PropTypes from 'prop-types';
+import { arrayOf, number, shape, string } from 'prop-types';
 
 import Button from '@/components/commons/Button';
 import Flex from '@/components/commons/Flex';
@@ -9,14 +9,14 @@ import Title from '@/components/commons/Title';
 import styles from './HistoryCard.module.scss';
 
 const HistoryCard = ({ history }) => {
-  const { title, description, advantages = [], socials } = history;
+  const { title, description, advantages, socials, image } = history;
 
   return (
     <div className={styles.card}>
       <Image
         className={styles.image}
-        src={history.image}
-        alt={history.title}
+        src={image}
+        alt={title}
         width={1170}
         height={567}
       />
@@ -60,18 +60,18 @@ const HistoryCard = ({ history }) => {
 };
 
 HistoryCard.propTypes = {
-  history: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    advantages: PropTypes.arrayOf(PropTypes.string),
-    socials: PropTypes.arrayOf(
-      PropTypes.shape({
-        type: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
+  history: shape({
+    id: number.isRequired,
+    title: string.isRequired,
+    description: string.isRequired,
+    advantages: arrayOf(string),
+    socials: arrayOf(
+      shape({
+        type: string.isRequired,
+        url: string.isRequired,
       }),
     ),
-    image: PropTypes.string.isRequired,
+    image: string.isRequired,
   }).isRequired,
 };
 

@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 
 const Logo = ({ className }) => {
   return (
@@ -47,7 +47,7 @@ const Logo = ({ className }) => {
 };
 
 Logo.propTypes = {
-  className: PropTypes.string,
+  className: string,
 };
 
 export default Logo;

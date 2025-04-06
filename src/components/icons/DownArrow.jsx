@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 
 const DownArrow = ({ className }) => {
   return (
@@ -21,7 +21,7 @@ const DownArrow = ({ className }) => {
 };
 
 DownArrow.propTypes = {
-  className: PropTypes.string,
+  className: string,
 };
 
 export default DownArrow;

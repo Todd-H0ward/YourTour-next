@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { node, string } from 'prop-types';
 
 const Section = ({ children, className, ...props }) => {
   return (
@@ -9,8 +9,8 @@ const Section = ({ children, className, ...props }) => {
 };
 
 Section.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
+  children: node.isRequired,
+  className: string,
 };
 
 export default Section;

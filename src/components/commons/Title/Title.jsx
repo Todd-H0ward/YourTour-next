@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import PropTypes from 'prop-types';
+import { node, number, oneOf, string } from 'prop-types';
 import { createElement } from 'react';
 
 import styles from './Title.module.scss';
@@ -45,12 +45,12 @@ const Title = ({
 };
 
 Title.propTypes = {
-  size: PropTypes.oneOf(['big', 'normal', 'small']),
-  align: PropTypes.oneOf(['left', 'center']),
-  mb: PropTypes.number,
-  w: PropTypes.number,
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
+  size: oneOf(['big', 'normal', 'small']),
+  align: oneOf(['left', 'center']),
+  mb: number,
+  w: number,
+  children: node.isRequired,
+  className: string,
 };
 
 export default Title;

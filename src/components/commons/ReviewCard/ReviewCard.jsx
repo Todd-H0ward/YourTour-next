@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import PropTypes from 'prop-types';
+import { number, shape, string } from 'prop-types';
 
 import Flex from '@/components/commons/Flex';
 import Text from '@/components/commons/Text';
@@ -45,12 +45,12 @@ const ReviewCard = ({ review }) => {
 };
 
 ReviewCard.propTypes = {
-  review: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    tour: PropTypes.string.isRequired,
-    comment: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
+  review: shape({
+    id: number.isRequired,
+    name: string.isRequired,
+    tour: string.isRequired,
+    comment: string.isRequired,
+    avatar: string.isRequired,
   }).isRequired,
 };
 

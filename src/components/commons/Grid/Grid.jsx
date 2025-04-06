@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import PropTypes from 'prop-types';
+import { node, number, shape, string } from 'prop-types';
 
 import styles from './Grid.module.scss';
 
@@ -27,15 +27,15 @@ const Grid = ({
 };
 
 Grid.propTypes = {
-  gap: PropTypes.number,
-  gapY: PropTypes.number,
-  breakpoints: PropTypes.shape({
-    large: PropTypes.number,
-    big: PropTypes.number,
-    small: PropTypes.number,
+  gap: number,
+  gapY: number,
+  breakpoints: shape({
+    large: number,
+    big: number,
+    small: number,
   }),
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
+  children: node.isRequired,
+  className: string,
 };
 
 export default Grid;

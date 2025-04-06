@@ -14,9 +14,7 @@ import Textarea from '@/components/commons/Textarea';
 
 import styles from './Form.module.scss';
 
-
 import { destinations } from '@/data/destinations';
-
 
 const Form = () => {
   const [form, setForm] = useState({

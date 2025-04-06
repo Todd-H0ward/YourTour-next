@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 
 const Telegram = ({ className }) => {
   return (
@@ -19,7 +19,7 @@ const Telegram = ({ className }) => {
 };
 
 Telegram.propTypes = {
-  className: PropTypes.string,
+  className: string,
 };
 
 export default Telegram;

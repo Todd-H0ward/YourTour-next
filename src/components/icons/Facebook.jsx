@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 
 const Facebook = ({ className }) => {
   return (
@@ -22,7 +22,7 @@ const Facebook = ({ className }) => {
 };
 
 Facebook.propTypes = {
-  className: PropTypes.string,
+  className: string,
 };
 
 export default Facebook;

@@ -1,7 +1,3 @@
-import history1 from '../../public/history/story-1.jpg';
-import history2 from '../../public/history/story-2.jpg';
-import history3 from '../../public/history/story-3.jpg';
-
 export const histories = [
   {
     id: 1,
@@ -23,13 +19,14 @@ export const histories = [
         url: '#',
       },
     ],
-    image: history1,
+    image: '/history/story-1.jpg',
   },
   {
     id: 2,
     title: 'Автостопом в Стамбул',
     description:
       'Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:',
+    advantages: [],
     socials: [
       {
         type: 'instagram',
@@ -40,13 +37,14 @@ export const histories = [
         url: '#',
       },
     ],
-    image: history2,
+    image: '/history/story-2.jpg',
   },
   {
     id: 3,
     title: 'Автостопом в Стамбул',
     description:
       'Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:',
+    advantages: [],
     socials: [
       {
         type: 'instagram',
@@ -61,6 +59,6 @@ export const histories = [
         url: '#',
       },
     ],
-    image: history3,
+    image: '/history/story-3.jpg',
   },
 ];

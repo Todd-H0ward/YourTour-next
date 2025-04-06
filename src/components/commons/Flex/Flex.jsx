@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import PropTypes from 'prop-types';
+import { bool, node, number, oneOf, string } from 'prop-types';
 
 import styles from './Flex.module.scss';
 
@@ -48,14 +48,14 @@ const Flex = ({
 };
 
 Flex.propTypes = {
-  vertical: PropTypes.bool,
-  align: PropTypes.oneOf(['start', 'end', 'center', 'stretch']),
-  justify: PropTypes.oneOf(['start', 'end', 'center', 'between']),
-  wrap: PropTypes.bool,
-  gap: PropTypes.number,
-  gapY: PropTypes.number,
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
+  vertical: bool,
+  align: oneOf(['start', 'end', 'center', 'stretch']),
+  justify: oneOf(['start', 'end', 'center', 'between']),
+  wrap: bool,
+  gap: number,
+  gapY: number,
+  children: node.isRequired,
+  className: string,
 };
 
 export default Flex;

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import PropTypes from 'prop-types';
+import { number, shape, string } from 'prop-types';
 
 import Button from '@/components/commons/Button';
 import Flex from '@/components/commons/Flex';
@@ -15,7 +15,7 @@ const TourCard = ({ tour }) => {
         className={styles.image}
         width={370}
         height={531}
-        src={tour.image.src}
+        src={tour.image}
         alt="tour"
       />
       <Flex className={styles.content} vertical align="start" gap={16}>
@@ -34,13 +34,11 @@ const TourCard = ({ tour }) => {
 };
 
 TourCard.propTypes = {
-  tour: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-    image: PropTypes.shape({
-      src: PropTypes.string.isRequired,
-    }).isRequired,
+  tour: shape({
+    id: number.isRequired,
+    title: string.isRequired,
+    price: string.isRequired,
+    image: string.isRequired,
   }).isRequired,
 };
 

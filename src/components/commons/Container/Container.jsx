@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import PropTypes from 'prop-types';
+import { bool, node, string } from 'prop-types';
 
 import styles from './Container.module.scss';
 
@@ -24,10 +24,10 @@ const Container = ({
 };
 
 Container.propTypes = {
-  fullWidth: PropTypes.bool,
-  small: PropTypes.bool,
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
+  fullWidth: bool,
+  small: bool,
+  children: node.isRequired,
+  className: string,
 };
 
 export default Container;
