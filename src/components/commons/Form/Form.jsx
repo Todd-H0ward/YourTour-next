@@ -12,9 +12,9 @@ import Select from '@/components/commons/Select';
 import Text from '@/components/commons/Text';
 import Textarea from '@/components/commons/Textarea';
 
-import styles from './Form.module.scss';
+import destinations from '@/constants/destinations';
 
-import { destinations } from '@/data/destinations';
+import styles from './Form.module.scss';
 
 const Form = () => {
   const [form, setForm] = useState({

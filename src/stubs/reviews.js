@@ -1,4 +1,4 @@
-export const reviews = [
+const reviews = [
   {
     id: 1,
     name: 'Мария',
@@ -16,3 +16,5 @@ export const reviews = [
     avatar: '/avatars/photo-2.jpg',
   },
 ];
+
+export default reviews;

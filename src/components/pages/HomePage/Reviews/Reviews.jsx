@@ -6,9 +6,9 @@ import Section from '@/components/commons/Section';
 import Text from '@/components/commons/Text';
 import Title from '@/components/commons/Title';
 
-import styles from './Reviews.module.scss';
+import reviews from '@/stubs/reviews';
 
-import { reviews } from '@/data/reviews';
+import styles from './Reviews.module.scss';
 
 const Reviews = () => {
   return (

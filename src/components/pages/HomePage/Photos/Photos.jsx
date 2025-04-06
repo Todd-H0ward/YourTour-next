@@ -7,9 +7,9 @@ import Section from '@/components/commons/Section';
 import Text from '@/components/commons/Text';
 import Title from '@/components/commons/Title';
 
-import styles from './Photos.module.scss';
+import photos from '@/stubs/photos';
 
-import { photos } from '@/data/photos';
+import styles from './Photos.module.scss';
 
 const Photos = () => {
   return (

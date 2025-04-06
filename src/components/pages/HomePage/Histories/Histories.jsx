@@ -5,9 +5,9 @@ import Section from '@/components/commons/Section';
 import Text from '@/components/commons/Text';
 import Title from '@/components/commons/Title';
 
-import styles from './Histories.module.scss';
+import histories from '@/stubs/histories';
 
-import { histories } from '@/data/histories';
+import styles from './Histories.module.scss';
 
 const Histories = () => {
   return (

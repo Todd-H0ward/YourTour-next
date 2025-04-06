@@ -1,6 +1,6 @@
 import { Facebook, Telegram, Vk } from '@/components/icons';
 
-export const socialLinks = [
+const SOCIAL_LINKS = [
   {
     title: 'telegram',
     link: '#',
@@ -17,3 +17,5 @@ export const socialLinks = [
     icon: <Vk />,
   },
 ];
+
+export default SOCIAL_LINKS;

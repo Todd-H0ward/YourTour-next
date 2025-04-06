@@ -5,9 +5,9 @@ import Tabs from '@/components/commons/Tabs';
 import Title from '@/components/commons/Title';
 import TourCard from '@/components/commons/TourCard';
 
-import styles from './Tours.module.scss';
+import tours from '@/stubs/tours';
 
-import { tours } from '@/data/tours';
+import styles from './Tours.module.scss';
 
 const tabsItems = [
   {

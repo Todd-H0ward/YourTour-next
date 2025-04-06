@@ -47,7 +47,7 @@ const eslintConfig = [
               position: 'before',
             },
             {
-              pattern: '{stubs/**,constants/**}',
+              pattern: '{stubs/**,**/stubs/**,constants/**,**/constants/**}',
               group: 'internal',
               position: 'before',
             },

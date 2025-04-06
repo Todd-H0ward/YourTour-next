@@ -1,4 +1,4 @@
-export const histories = [
+const histories = [
   {
     id: 1,
     title: 'Автостопом в Стамбул',
@@ -62,3 +62,5 @@ export const histories = [
     image: '/history/story-3.jpg',
   },
 ];
+
+export default histories;

@@ -1,4 +1,4 @@
-export const photos = [
+const photos = [
   { id: 1, image: '/photos/travel-1.jpg', alt: 'photo' },
   { id: 2, image: '/photos/travel-2.jpg', alt: 'photo' },
   { id: 3, image: '/photos/travel-3.jpg', alt: 'photo' },
@@ -13,3 +13,5 @@ export const photos = [
   { id: 12, image: '/photos/travel-12.jpg', alt: 'photo' },
   { id: 13, image: '/photos/travel-13.jpg', alt: 'photo' },
 ];
+
+export default photos;

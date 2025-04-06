@@ -1,4 +1,4 @@
-export const tours = [
+const tours = [
   {
     id: 1,
     title: 'Путешествие в горы',
@@ -36,3 +36,5 @@ export const tours = [
     image: '/tours/photo-6.jpg',
   },
 ];
+
+export default tours;
