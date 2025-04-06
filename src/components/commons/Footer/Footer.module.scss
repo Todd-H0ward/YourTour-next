@@ -13,30 +13,5 @@
 }
 
 .link {
-  display: flex;
-  align-items: center;
-  gap: 11px;
   color: var(--black);
-}
-
-.text {
-  position: relative;
-
-  &::after {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: block;
-    height: 1px;
-    width: 0;
-    margin: 0 auto;
-    background: var(--black);
-    transition: width 0.3s;
-    content: '';
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
 }

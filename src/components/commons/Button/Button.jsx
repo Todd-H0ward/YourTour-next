@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import Link from 'next/link';
 import { bool, node, oneOf, string } from 'prop-types';
 
 import { Arrow } from '@/components/icons';
@@ -19,8 +20,10 @@ const Button = ({
   className,
   ...props
 }) => {
+  const Component = props.href ? Link : 'button';
+
   return (
-    <button
+    <Component
       className={clsx(
         styles.btn,
         variantClasses[variant],
@@ -32,7 +35,7 @@ const Button = ({
     >
       {children}
       {withIcon && <Arrow />}
-    </button>
+    </Component>
   );
 };
 

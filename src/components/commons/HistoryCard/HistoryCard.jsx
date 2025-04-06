@@ -48,9 +48,9 @@ const HistoryCard = ({ history }) => {
           <Flex className={styles.links} gap={36}>
             {socials &&
               socials.map((social) => (
-                <a key={social.type} className={styles.link} href={social.url}>
+                <Button key={social.type} variant="link" href={social.url}>
                   {social.type}
-                </a>
+                </Button>
               ))}
           </Flex>
         </Flex>

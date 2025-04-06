@@ -1,5 +1,4 @@
 @use '@/styles/typography';
-@use '@/styles/helpers';
 
 .tabs {
   @media (max-width: 768px) {
@@ -8,21 +7,9 @@
 }
 
 .tab {
-  position: relative;
   @extend .p-big;
   cursor: pointer;
   padding-bottom: 5px;
-
-  &:after {
-    @extend .underline;
-    height: 2px;
-  }
-
-  @media (hover: hover) {
-    &:hover::after {
-      width: 100%;
-    }
-  }
 
   @media (max-width: 1024px) {
     padding-bottom: 6px;
@@ -38,6 +25,5 @@
 
   &::after {
     width: 100%;
-    background: var(--orange-200);
   }
 }

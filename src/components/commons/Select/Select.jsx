@@ -18,7 +18,7 @@ const Select = ({ label, placeholder, items, value, onChange }) => {
       {label}
       <div className={styles.wrapper}>
         <select
-          className={styles.select}
+          className={clsx(styles.select, value && styles.selected)}
           value={value}
           onChange={onChange}
           onClick={toggleOpen}

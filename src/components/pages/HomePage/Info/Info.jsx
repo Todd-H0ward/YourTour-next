@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import Button from '@/components/commons/Button';
 import Container from '@/components/commons/Container';
 import Flex from '@/components/commons/Flex';
 import Grid from '@/components/commons/Grid';
@@ -31,9 +32,13 @@ const Info = () => {
             </Title>
             <Text className={styles.text}>
               Напиши на почту и узнай подробности на{' '}
-              <a className={styles.link} href="mailto:yourtour@gmail.com">
+              <Button
+                variant="link"
+                className={styles.link}
+                href="mailto:yourtour@gmail.com"
+              >
                 yourtour@gmail.com
-              </a>
+              </Button>
             </Text>
           </Flex>
         </Grid>

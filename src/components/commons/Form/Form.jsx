@@ -137,7 +137,9 @@ const Form = () => {
           label={
             <span className={styles.agreement}>
               Нажимая кнопку, я принимаю условия{' '}
-              <a href="#">Лицензионного договора</a>
+              <Button variant="link" href="#">
+                Лицензионного договора
+              </Button>
             </span>
           }
           checked={form.isAgree}

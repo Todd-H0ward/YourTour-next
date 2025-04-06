@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { arrayOf, number, shape, string } from 'prop-types';
 import { useState } from 'react';
 
+import Button from '@/components/commons/Button';
 import Flex from '@/components/commons/Flex';
 
 import styles from './Tabs.module.scss';
@@ -22,13 +23,14 @@ const Tabs = ({ items, className }) => {
       className={clsx(styles.tabs, className)}
     >
       {items.map((item) => (
-        <button
+        <Button
+          variant="link"
           key={item.id}
           className={clsx(styles.tab, activeTab === item.id && styles.active)}
           onClick={() => handleTabClick(item.id)}
         >
           {item.title}
-        </button>
+        </Button>
       ))}
     </Flex>
   );

@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { arrayOf, shape, string } from 'prop-types';
 
+import Button from '@/components/commons/Button';
 import Flex from '@/components/commons/Flex';
 
 import styles from './Menu.module.scss';
@@ -10,9 +10,9 @@ const Menu = ({ items, className }) => {
     <nav className={className}>
       <Flex className={styles.list} gap={50}>
         {items.map((item) => (
-          <Link key={item.title} href={item.href} className={styles.link}>
+          <Button variant="link" key={item.title} href={item.href}>
             {item.title}
-          </Link>
+          </Button>
         ))}
       </Flex>
     </nav>

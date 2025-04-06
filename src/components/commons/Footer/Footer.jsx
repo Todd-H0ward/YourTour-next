@@ -1,3 +1,4 @@
+import Button from '@/components/commons/Button';
 import Container from '@/components/commons/Container';
 import Flex from '@/components/commons/Flex';
 import Text from '@/components/commons/Text';
@@ -15,15 +16,17 @@ const Footer = () => {
 
           <Flex gap={25}>
             {socialLinks.map((link) => (
-              <a
-                key={link.title}
-                className={styles.link}
-                href={link.link}
-                target="_blank"
-              >
+              <Flex key={link.title} align="center" gap={11}>
                 {link.icon}
-                <span className={styles.text}>{link.title}</span>
-              </a>
+                <Button
+                  variant="link"
+                  className={styles.link}
+                  href={link.link}
+                  target="_blank"
+                >
+                  {link.title}
+                </Button>
+              </Flex>
             ))}
           </Flex>
         </Flex>

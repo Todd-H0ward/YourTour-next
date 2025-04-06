@@ -13,11 +13,24 @@
   padding: clamp(10px, 0.264rem + 1.54vw, 20px);
   flex: 1 1 auto;
   width: 100%;
+  color: var(--gray-300);
   border: 1px solid var(--beige-200);
   border-radius: 10px;
   background: var(--beige-100);
   cursor: pointer;
   transition: all 0.3s;
+
+  & > * {
+    color: var(--black);
+  }
+
+  &:hover {
+    background: var(--beige-200);
+  }
+}
+
+.selected {
+  color: var(--black);
 }
 
 .icon {
