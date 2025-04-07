@@ -11,11 +11,11 @@ const Hero = () => {
   return (
     <Section className={styles.hero}>
       <Container>
-        <Flex className={styles.content} vertical align="center" gap={50}>
-          <Title className={styles.title} mb={0} size="big" align="center">
+        <Flex className={styles.content} vertical align="center">
+          <Title className={styles.title} size="big" align="center">
             Идеальные путешествия существуют
           </Title>
-          <Text className={styles.description} align="center" w={560}>
+          <Text className={styles.description} align="center">
             Идейные соображения высшего порядка а также рамки и место обучения
             кадров
           </Text>

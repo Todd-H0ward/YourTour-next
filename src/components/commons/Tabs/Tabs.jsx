@@ -15,13 +15,7 @@ const Tabs = ({ items, className }) => {
   };
 
   return (
-    <Flex
-      wrap
-      gap={30}
-      gapY={10}
-      justify="center"
-      className={clsx(styles.tabs, className)}
-    >
+    <Flex wrap justify="center" className={clsx(styles.tabs, className)}>
       {items.map((item) => (
         <Button
           variant="link"

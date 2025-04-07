@@ -17,14 +17,13 @@ const Photos = () => {
       <Container fullWidth>
         <Flex vertical align="center">
           <Title align="center">Фотографии путешествий</Title>
-          <Text className={styles.description} mb={100} w={400} align="center">
+          <Text className={styles.description} align="center">
             Идейные соображения высшего порядка, а также рамки и место обучения
             кадров
           </Text>
           <Grid
             className={styles.container}
             breakpoints={{ large: 20, big: 12, small: 6 }}
-            gap={30}
           >
             {photos.map((photo) => (
               <div key={photo.id} className={styles.wrapper}>

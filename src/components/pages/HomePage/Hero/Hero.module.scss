@@ -14,6 +14,8 @@
 }
 
 .content {
+  gap: 50px;
+
   @media (max-width: 375px) {
     gap: 40px;
   }
@@ -24,6 +26,8 @@
 }
 
 .description {
+  max-width: 560px;
+
   @media (max-width: 1024px) {
     max-width: 400px;
   }

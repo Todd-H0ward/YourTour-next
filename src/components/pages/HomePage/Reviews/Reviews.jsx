@@ -15,14 +15,17 @@ const Reviews = () => {
     <Section id="reviews">
       <Container>
         <Flex vertical align="center">
-          <Title w={530} align="center">
+          <Title className={styles.title} align="center">
             Отзывы наших путешественников
           </Title>
-          <Text className={styles.description} mb={100} w={400} align="center">
+          <Text className={styles.description} align="center">
             Идейные соображения высшего порядка, а также рамки и место обучения
             кадров
           </Text>
-          <Grid gap={30} breakpoints={{ large: 2, big: 2, small: 1 }}>
+          <Grid
+            className={styles.grid}
+            breakpoints={{ large: 2, big: 2, small: 1 }}
+          >
             {reviews.map((review) => (
               <ReviewCard key={review.id} review={review} />
             ))}

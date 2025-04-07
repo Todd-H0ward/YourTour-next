@@ -21,7 +21,7 @@
   height: 100%;
   object-fit: cover;
   object-position: 40%;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .content {
@@ -43,6 +43,14 @@
 
   @media (max-width: 1024px) {
     padding: clamp(25px, 0.66rem + 3.85vw, 50px);
+  }
+}
+
+.title {
+  max-width: 230px;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
   }
 }
 

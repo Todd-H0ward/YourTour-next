@@ -1,4 +1,6 @@
 .description {
+  max-width: 400px;
+  margin-bottom: 100px;
   color: var(--gray-300);
 
   @media (max-width: 768px) {
@@ -7,6 +9,8 @@
 }
 
 .content {
+  gap: 50px;
+
   @media (max-width: 768px) {
     gap: 20px;
   }

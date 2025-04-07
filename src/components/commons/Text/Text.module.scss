@@ -1,14 +1,5 @@
 @use '@/styles/typography';
 
-.text {
-  margin-bottom: var(--mb, 0);
-  max-width: var(--w, 100%);
-
-  @media (max-width: 768px) {
-    max-width: 100%;
-  }
-}
-
 .alignCenter {
   text-align: center;
 }

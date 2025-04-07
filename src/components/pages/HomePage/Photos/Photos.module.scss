@@ -1,4 +1,6 @@
 .description {
+  max-width: 400px;
+  margin-bottom: 100px;
   color: var(--gray-300);
 
   @media (max-width: 768px) {
@@ -7,8 +9,7 @@
 }
 
 .container {
-  grid-column-gap: clamp(20px, -0.288rem + 2.4vww, 30px);
-  grid-row-gap: 30px;
+  gap: 30px;
 
   @media (max-width: 1024px) {
     grid-column-gap: clamp(10px, 1.053rem + 0.31vw, 20px);

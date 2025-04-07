@@ -1,7 +1,17 @@
+.title {
+  max-width: 530px;
+}
+
 .description {
+  max-width: 400px;
+  margin-bottom: 100px;
   color: var(--gray-300);
 
   @media (max-width: 768px) {
     margin-bottom: 50px;
   }
+}
+
+.grid {
+  gap: 30px;
 }

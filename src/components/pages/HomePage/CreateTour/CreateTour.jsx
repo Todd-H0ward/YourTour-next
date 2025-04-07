@@ -13,7 +13,7 @@ const CreateTour = () => {
       <Container>
         <Flex vertical align="center">
           <Title align="center">Собери свой тур</Title>
-          <Text className={styles.description} mb={100} w={400} align="center">
+          <Text className={styles.description} align="center">
             Идейные соображения высшего порядка, а также рамки и место обучения
             кадров
           </Text>

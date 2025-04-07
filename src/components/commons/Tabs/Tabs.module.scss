@@ -1,6 +1,9 @@
 @use '@/styles/typography';
 
 .tabs {
+  column-gap: 30px;
+  row-gap: 10px;
+
   @media (max-width: 768px) {
     column-gap: 10px;
   }

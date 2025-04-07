@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { bool, node, number, oneOf, string } from 'prop-types';
+import { bool, node, oneOf, string } from 'prop-types';
 
 import styles from './Flex.module.scss';
 
@@ -22,8 +22,6 @@ const Flex = ({
   align = 'start',
   justify = 'start',
   wrap = false,
-  gap = 0,
-  gapY = gap,
   children,
   className,
 }) => {
@@ -37,10 +35,6 @@ const Flex = ({
         wrap && styles.wrap,
         className,
       )}
-      style={{
-        '--gap': `${gap}px`,
-        '--gap-y': `${gapY}px`,
-      }}
     >
       {children}
     </div>
@@ -52,8 +46,6 @@ Flex.propTypes = {
   align: oneOf(['start', 'end', 'center', 'stretch']),
   justify: oneOf(['start', 'end', 'center', 'between']),
   wrap: bool,
-  gap: number,
-  gapY: number,
   children: node.isRequired,
   className: string,
 };

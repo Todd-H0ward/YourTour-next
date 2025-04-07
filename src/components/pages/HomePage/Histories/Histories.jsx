@@ -14,15 +14,13 @@ const Histories = () => {
     <Section id="histories">
       <Container>
         <Flex vertical align="center">
-          <Title align="center" mb={30}>
-            Истории путешествий
-          </Title>
-          <Text className={styles.description} align="center" mb={100} w={400}>
+          <Title align="center">Истории путешествий</Title>
+          <Text className={styles.description} align="center">
             Идейные соображения высшего порядка, а также рамки и место обучения
             кадров
           </Text>
 
-          <Flex className={styles.content} vertical align="stretch" gap={50}>
+          <Flex className={styles.content} vertical align="stretch">
             {histories.map((history) => (
               <HistoryCard key={history.id} history={history} />
             ))}

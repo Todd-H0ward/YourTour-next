@@ -18,12 +18,20 @@
 }
 
 .inner {
+  gap: 70px;
+
   @media (max-width: 768px) {
     gap: 40px;
   }
 }
 
+.info {
+  gap: 8px;
+}
+
 .comment {
+  gap: 28px;
+
   @media (max-width: 768px) {
     gap: 25px;
   }

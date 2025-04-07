@@ -14,9 +14,9 @@ const Footer = () => {
         <Flex justify="between" className={styles.content}>
           <Text>Наши социальные сети</Text>
 
-          <Flex gap={25}>
+          <Flex className={styles.wrapper}>
             {socialLinks.map((link) => (
-              <Flex key={link.title} align="center" gap={11}>
+              <Flex key={link.title} className={styles.item} align="center">
                 {link.icon}
                 <Button
                   variant="link"

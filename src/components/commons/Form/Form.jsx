@@ -56,12 +56,10 @@ const Form = () => {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit} onReset={handleReset}>
-      <Flex className={styles.content} vertical align="stretch" gap={33}>
+      <Flex className={styles.content} vertical align="stretch">
         <Grid
           className={styles.content}
           breakpoints={{ large: 2, big: 2, small: 1 }}
-          gap={30}
-          gapY={33}
         >
           <Input
             required
@@ -120,9 +118,9 @@ const Form = () => {
           value={form.comment}
           onChange={(e) => handleChange('comment', e.target.value)}
         />
-        <Flex vertical gap={8}>
+        <Flex className={styles.radio} vertical>
           <Text>Вам есть 18 лет?</Text>
-          <Flex gap={30}>
+          <Flex className={styles.group}>
             <Radio
               label="Да"
               name="isAdult"
@@ -149,7 +147,7 @@ const Form = () => {
           checked={form.isAgree}
           onChange={(e) => handleChange('isAgree', e.target.checked)}
         />
-        <Flex className={styles.btns} gap={30}>
+        <Flex className={styles.group}>
           <Button type="submit">Найти тур</Button>
           <Button type="reset" variant="filled">
             Сбросить

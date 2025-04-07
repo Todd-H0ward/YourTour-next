@@ -15,9 +15,8 @@ const Info = () => {
     <Section>
       <Container small>
         <Grid
-          className={styles.container}
+          className={styles.grid}
           breakpoints={{ large: 2, big: 2, small: 1 }}
-          gap={30}
         >
           <Image
             className={styles.image}
@@ -26,8 +25,8 @@ const Info = () => {
             width={370}
             height={370}
           />
-          <Flex className={styles.info} vertical gap={20} justify="center">
-            <Title mb={0} size="small" align="left">
+          <Flex className={styles.info} vertical justify="center">
+            <Title size="small" align="left">
               Пора в путешествие вместе с нами!
             </Title>
             <Text className={styles.text}>

@@ -6,7 +6,10 @@
   z-index: 100;
   padding: 29px 0;
   color: var(--white);
-  transition: all 0.3s;
+  transition:
+    color 0.4s ease-in-out,
+    background 0.3s ease-in,
+    backdrop-filter 0.5s ease-in;
 
   &.fixed {
     position: fixed;

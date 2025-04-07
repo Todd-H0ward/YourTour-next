@@ -27,12 +27,10 @@ const HistoryCard = ({ history }) => {
         align="stretch"
       >
         <Flex vertical>
-          <Title className={styles.title} w={555} size="small" mb={37}>
+          <Title className={styles.title} size="small">
             {title}
           </Title>
-          <Text w={555} mb={25}>
-            {description}
-          </Text>
+          <Text className={styles.description}>{description}</Text>
           {advantages && (
             <ul className={styles.list}>
               {advantages.map((advantage) => (
@@ -45,7 +43,7 @@ const HistoryCard = ({ history }) => {
           <Button className={styles.btn} withIcon>
             Подробнее
           </Button>
-          <Flex className={styles.links} gap={36}>
+          <Flex className={styles.links}>
             {socials &&
               socials.map((social) => (
                 <Button key={social.type} variant="link" href={social.url}>

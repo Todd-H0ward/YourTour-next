@@ -18,8 +18,8 @@ const TourCard = ({ tour }) => {
         src={tour.image}
         alt="tour"
       />
-      <Flex className={styles.content} vertical align="start" gap={16}>
-        <Title mb={0} size="small" w={230}>
+      <Flex className={styles.content} vertical align="start">
+        <Title className={styles.title} size="small">
           {tour.title}
         </Title>
         <Text className={styles.price} size="small">

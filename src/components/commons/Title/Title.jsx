@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { node, number, oneOf, string } from 'prop-types';
+import { node, oneOf, string } from 'prop-types';
 import { createElement } from 'react';
 
 import styles from './Title.module.scss';
@@ -15,14 +15,7 @@ const alignClasses = {
   left: styles.alignLeft,
 };
 
-const Title = ({
-  size = 'normal',
-  align = 'left',
-  mb = 30,
-  w,
-  children,
-  className,
-}) => {
+const Title = ({ size = 'normal', align = 'left', children, className }) => {
   const tagBySize = {
     big: 'h1',
     normal: 'h2',
@@ -32,13 +25,7 @@ const Title = ({
   return createElement(
     tagBySize[size],
     {
-      className: clsx(
-        styles.title,
-        sizeClasses[size],
-        alignClasses[align],
-        className,
-      ),
-      style: { '--mb': `${mb}px`, '--w': `${w}px` },
+      className: clsx(sizeClasses[size], alignClasses[align], className),
     },
     [children],
   );
@@ -47,8 +34,6 @@ const Title = ({
 Title.propTypes = {
   size: oneOf(['big', 'normal', 'small']),
   align: oneOf(['left', 'center']),
-  mb: number,
-  w: number,
   children: node.isRequired,
   className: string,
 };

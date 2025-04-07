@@ -14,7 +14,9 @@
   background: var(--beige-100);
   border: 1px solid var(--beige-200);
   border-radius: 10px;
-  transition: all 0.3s;
+  transition:
+    color 0.3s,
+    background 0.3s;
 
   &::placeholder {
     color: var(--gray-300);

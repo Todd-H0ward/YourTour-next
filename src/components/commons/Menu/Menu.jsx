@@ -8,7 +8,7 @@ import styles from './Menu.module.scss';
 const Menu = ({ items, className }) => {
   return (
     <nav className={className}>
-      <Flex className={styles.list} gap={50}>
+      <Flex className={styles.list}>
         {items.map((item) => (
           <Button variant="link" key={item.title} href={item.href}>
             {item.title}

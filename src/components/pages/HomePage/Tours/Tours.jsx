@@ -36,12 +36,12 @@ const Tours = () => {
   return (
     <Section id="tours">
       <Container>
-        <Title className={styles.title} mb={35} size="normal" align="center">
+        <Title className={styles.title} size="normal" align="center">
           Выбери свой тур
         </Title>
         <Tabs className={styles.tabs} items={tabsItems} />
 
-        <Grid gap={30}>
+        <Grid className={styles.grid}>
           {tours.map((tour) => (
             <TourCard key={tour.id} tour={tour} />
           ))}

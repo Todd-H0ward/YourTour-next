@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { node, number, oneOf, string } from 'prop-types';
+import { node, oneOf, string } from 'prop-types';
 
 import styles from './Text.module.scss';
 
@@ -14,27 +14,9 @@ const alignClasses = {
   left: styles.alignLeft,
 };
 
-const Text = ({
-  align = 'left',
-  size = 'normal',
-  mb = 0,
-  w,
-  children,
-  className,
-}) => {
+const Text = ({ align = 'left', size = 'normal', children, className }) => {
   return (
-    <p
-      className={clsx(
-        styles.text,
-        alignClasses[align],
-        sizeClasses[size],
-        className,
-      )}
-      style={{
-        '--mb': `${mb}px`,
-        '--w': `${w}px`,
-      }}
-    >
+    <p className={clsx(alignClasses[align], sizeClasses[size], className)}>
       {children}
     </p>
   );
@@ -43,8 +25,6 @@ const Text = ({
 Text.propTypes = {
   align: oneOf(['left', 'center']),
   size: oneOf(['big', 'normal', 'small']),
-  mb: number,
-  w: number,
   children: node.isRequired,
   className: string,
 };

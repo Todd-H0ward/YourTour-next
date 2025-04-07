@@ -9,6 +9,10 @@
   }
 }
 
+.info {
+  gap: 20px;
+}
+
 .text {
   color: var(--gray-300);
 }
@@ -17,10 +21,8 @@
   color: var(--black);
 }
 
-.container {
-  @media (max-width: 1024px) {
-    gap: 30px;
-  }
+.grid {
+  gap: 30px;
 }
 
 @media (max-width: 768px) {
