@@ -12,6 +12,8 @@ import Select from '@/components/commons/Select';
 import Text from '@/components/commons/Text';
 import Textarea from '@/components/commons/Textarea';
 
+import formatPhoneNumber from '@/utils/formatPhoneNumber';
+
 import destinations from '@/constants/destinations';
 
 import styles from './Form.module.scss';
@@ -90,7 +92,9 @@ const Form = () => {
             type="tel"
             placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
             value={form.phone}
-            onChange={(e) => handleChange('phone', e.target.value)}
+            onChange={(e) =>
+              handleChange('phone', formatPhoneNumber(e.target.value))
+            }
           />
           <Input
             required
