@@ -1,5 +1,7 @@
-import styles from './Flex.module.scss';
 import clsx from 'clsx';
+import { bool, node, oneOf, string } from 'prop-types';
+
+import styles from './Flex.module.scss';
 
 const alignClasses = {
   start: styles.alignStart,
@@ -20,29 +22,32 @@ const Flex = ({
   align = 'start',
   justify = 'start',
   wrap = false,
-  gap = 0,
-  gapY = gap,
   children,
   className,
 }) => {
-  const classes = [
-    alignClasses[align],
-    justifyClasses[justify],
-    vertical && styles.vertical,
-    wrap && styles.wrap,
-  ];
-
   return (
     <div
-      className={clsx(styles.flex, classes, className)}
-      style={{
-        '--gap': `${gap}px`,
-        '--gap-y': `${gapY}px`,
-      }}
+      className={clsx(
+        styles.flex,
+        alignClasses[align],
+        justifyClasses[justify],
+        vertical && styles.vertical,
+        wrap && styles.wrap,
+        className,
+      )}
     >
       {children}
     </div>
   );
+};
+
+Flex.propTypes = {
+  vertical: bool,
+  align: oneOf(['start', 'end', 'center', 'stretch']),
+  justify: oneOf(['start', 'end', 'center', 'between']),
+  wrap: bool,
+  children: node.isRequired,
+  className: string,
 };
 
 export default Flex;

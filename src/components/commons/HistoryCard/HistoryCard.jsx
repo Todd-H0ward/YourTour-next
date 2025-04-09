@@ -1,19 +1,22 @@
-import Title from '@/components/commons/Title/Title';
-import Text from '@/components/commons/Text/Text';
-import Flex from '@/components/commons/Flex/Flex';
-import Button from '@/components/commons/Button/Button';
 import Image from 'next/image';
+import { arrayOf, number, shape, string } from 'prop-types';
+
+import Button from '@/components/commons/Button';
+import Flex from '@/components/commons/Flex';
+import Text from '@/components/commons/Text';
+import Title from '@/components/commons/Title';
+
 import styles from './HistoryCard.module.scss';
 
 const HistoryCard = ({ history }) => {
-  const { title, description, advantages = [], socials } = history;
+  const { title, description, advantages, socials, image } = history;
 
   return (
     <div className={styles.card}>
       <Image
         className={styles.image}
-        src={history.image}
-        alt={history.title}
+        src={image}
+        alt={title}
         width={1170}
         height={567}
       />
@@ -24,16 +27,14 @@ const HistoryCard = ({ history }) => {
         align="stretch"
       >
         <Flex vertical>
-          <Title className={styles.title} w={555} size="small" mb={37}>
+          <Title className={styles.title} size="small">
             {title}
           </Title>
-          <Text w={555} mb={25}>
-            {description}
-          </Text>
+          <Text className={styles.description}>{description}</Text>
           {advantages && (
             <ul className={styles.list}>
-              {advantages.map((advantage, index) => (
-                <li key={index}>{advantage}</li>
+              {advantages.map((advantage) => (
+                <li key={advantage}>{advantage}</li>
               ))}
             </ul>
           )}
@@ -42,18 +43,34 @@ const HistoryCard = ({ history }) => {
           <Button className={styles.btn} withIcon>
             Подробнее
           </Button>
-          <Flex className={styles.links} gap={36}>
+          <Flex className={styles.links}>
             {socials &&
-              socials.map((social, index) => (
-                <a key={index} className={styles.link} href={social.url}>
+              socials.map((social) => (
+                <Button key={social.type} variant="link" href={social.url}>
                   {social.type}
-                </a>
+                </Button>
               ))}
           </Flex>
         </Flex>
       </Flex>
     </div>
   );
+};
+
+HistoryCard.propTypes = {
+  history: shape({
+    id: number.isRequired,
+    title: string.isRequired,
+    description: string.isRequired,
+    advantages: arrayOf(string),
+    socials: arrayOf(
+      shape({
+        type: string.isRequired,
+        url: string.isRequired,
+      }),
+    ),
+    image: string.isRequired,
+  }).isRequired,
 };
 
 export default HistoryCard;

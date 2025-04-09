@@ -1,6 +1,10 @@
-import styles from './Button.module.scss';
 import clsx from 'clsx';
-import Image from 'next/image';
+import Link from 'next/link';
+import { bool, node, oneOf, string } from 'prop-types';
+
+import { Arrow } from '@/components/icons';
+
+import styles from './Button.module.scss';
 
 const variantClasses = {
   solid: styles.solid,
@@ -16,20 +20,31 @@ const Button = ({
   className,
   ...props
 }) => {
-  const classes = [
-    variantClasses[variant],
-    withIcon && styles.withIcon,
-    small && styles.small,
-  ];
+  const Component = props.href ? Link : 'button';
 
   return (
-    <button className={clsx(styles.btn, classes, className)} {...props}>
-      {children}
-      {withIcon && (
-        <Image src="/icons/arrow-icon.svg" alt="arrow" width={24} height={26} />
+    <Component
+      className={clsx(
+        styles.btn,
+        variantClasses[variant],
+        withIcon && styles.withIcon,
+        small && styles.small,
+        className,
       )}
-    </button>
+      {...props}
+    >
+      {children}
+      {withIcon && <Arrow />}
+    </Component>
   );
+};
+
+Button.propTypes = {
+  variant: oneOf(['solid', 'filled', 'link']),
+  withIcon: bool,
+  small: bool,
+  children: node.isRequired,
+  className: string,
 };
 
 export default Button;

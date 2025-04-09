@@ -1,0 +1,28 @@
+:root {
+  --border-radius: 50px;
+  --border-radius-middle: 30px;
+  --border-radius-small: 20px;
+  --border-radius-change: clamp(
+    var(--border-radius-small),
+    0.167rem + 4.62vw,
+    var(--border-radius)
+  );
+
+  --black: #1b1f2b;
+  --white: #fff;
+
+  --orange-200: #efa501;
+  --orange-100: #f8e6be;
+
+  --green-400: #286562;
+  --green-300: #3b7e7b;
+  --green-200: #627f7e;
+  --green-100: #e0f0e5;
+
+  --gray-300: #a6a6a6;
+  --gray-200: #d9dfdb;
+  --gray-100: #f1f3f2;
+
+  --beige-200: #f4f0e9;
+  --beige-100: #f9f7f4;
+}

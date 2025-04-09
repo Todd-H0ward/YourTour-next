@@ -1,9 +1,12 @@
 'use client';
 
-import styles from './Select.module.scss';
-import Image from 'next/image';
-import { useState } from 'react';
 import clsx from 'clsx';
+import { arrayOf, func, string } from 'prop-types';
+import { useState } from 'react';
+
+import { DownArrow } from '@/components/icons';
+
+import styles from './Select.module.scss';
 
 const Select = ({ label, placeholder, items, value, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +18,7 @@ const Select = ({ label, placeholder, items, value, onChange }) => {
       {label}
       <div className={styles.wrapper}>
         <select
-          className={styles.select}
+          className={clsx(styles.select, value && styles.selected)}
           value={value}
           onChange={onChange}
           onClick={toggleOpen}
@@ -30,16 +33,18 @@ const Select = ({ label, placeholder, items, value, onChange }) => {
             </option>
           ))}
         </select>
-        <Image
-          className={clsx(styles.icon, isOpen && styles.open)}
-          src="/icons/select-icon.svg"
-          width={26}
-          height={26}
-          alt="icon"
-        />
+        <DownArrow className={clsx(styles.icon, isOpen && styles.open)} />
       </div>
     </label>
   );
+};
+
+Select.propTypes = {
+  label: string.isRequired,
+  placeholder: string.isRequired,
+  items: arrayOf(string).isRequired,
+  value: string.isRequired,
+  onChange: func.isRequired,
 };
 
 export default Select;

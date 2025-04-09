@@ -1,17 +1,22 @@
 'use client';
 
-import Grid from '@/components/commons/Grid/Grid';
-import Input from '@/components/commons/Input/Input';
-import styles from './Form.module.scss';
-import Flex from '@/components/commons/Flex/Flex';
-import Button from '@/components/commons/Button/Button';
-import Select from '@/components/commons/Select/Select';
-import Textarea from '@/components/commons/Textarea/Textarea';
-import Text from '@/components/commons/Text/Text';
-import Radio from '@/components/commons/Radio/Radio';
-import Checkbox from '@/components/commons/Checkbox/Checkbox';
-import { destinations } from '@/data/destinations';
 import { useState } from 'react';
+
+import Button from '@/components/commons/Button';
+import Checkbox from '@/components/commons/Checkbox';
+import Flex from '@/components/commons/Flex';
+import Grid from '@/components/commons/Grid';
+import Input from '@/components/commons/Input';
+import Radio from '@/components/commons/Radio';
+import Select from '@/components/commons/Select';
+import Text from '@/components/commons/Text';
+import Textarea from '@/components/commons/Textarea';
+
+import formatPhoneNumber from '@/utils/formatPhoneNumber';
+
+import destinations from '@/constants/destinations';
+
+import styles from './Form.module.scss';
 
 const Form = () => {
   const [form, setForm] = useState({
@@ -51,12 +56,10 @@ const Form = () => {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit} onReset={handleReset}>
-      <Flex className={styles.content} vertical align="stretch" gap={33}>
+      <Flex className={styles.content} vertical align="stretch">
         <Grid
           className={styles.content}
           breakpoints={{ large: 2, big: 2, small: 1 }}
-          gap={30}
-          gapY={33}
         >
           <Input
             required
@@ -87,7 +90,9 @@ const Form = () => {
             type="tel"
             placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
             value={form.phone}
-            onChange={(e) => handleChange('phone', e.target.value)}
+            onChange={(e) =>
+              handleChange('phone', formatPhoneNumber(e.target.value))
+            }
           />
           <Input
             required
@@ -113,9 +118,9 @@ const Form = () => {
           value={form.comment}
           onChange={(e) => handleChange('comment', e.target.value)}
         />
-        <Flex vertical gap={8}>
+        <Flex className={styles.radio} vertical>
           <Text>Вам есть 18 лет?</Text>
-          <Flex gap={30}>
+          <Flex className={styles.group}>
             <Radio
               label="Да"
               name="isAdult"
@@ -133,14 +138,16 @@ const Form = () => {
         <Checkbox
           label={
             <span className={styles.agreement}>
-              Нажимая кнопку, я принимаю условия{' '}
-              <a href="#">Лицензионного договора</a>
+              Нажимая кнопку, я принимаю условия&nbsp;
+              <Button className={styles.link} variant="link" href="#">
+                Лицензионного договора
+              </Button>
             </span>
           }
           checked={form.isAgree}
           onChange={(e) => handleChange('isAgree', e.target.checked)}
         />
-        <Flex className={styles.btns} gap={30}>
+        <Flex className={styles.btns}>
           <Button type="submit">Найти тур</Button>
           <Button type="reset" variant="filled">
             Сбросить

@@ -1,28 +1,18 @@
-@use '@/assets/styles/typography';
-@use '@/assets/styles/helpers';
+@use '@/styles/typography';
 
 .tabs {
+  column-gap: 31px;
+  row-gap: 10px;
+
   @media (max-width: 768px) {
     column-gap: 10px;
   }
 }
 
 .tab {
-  position: relative;
   @extend .p-big;
   cursor: pointer;
   padding-bottom: 5px;
-
-  &:after {
-    @extend .underline;
-    height: 2px;
-  }
-
-  @media (hover: hover) {
-    &:hover::after {
-      width: 100%;
-    }
-  }
 
   @media (max-width: 1024px) {
     padding-bottom: 6px;
@@ -38,6 +28,5 @@
 
   &::after {
     width: 100%;
-    background: var(--orange-200);
   }
 }

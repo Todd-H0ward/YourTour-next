@@ -1,4 +1,4 @@
-@use '@/assets/styles/typography';
+@use '@/styles/typography';
 
 .form {
   width: 100%;
@@ -11,34 +11,53 @@
   );
 
   @media (max-width: 768px) {
-    padding: 20px 20px 40px;
+    padding: 21px 20px 40px;
   }
 }
 
 .content {
+  column-gap: 30px;
+  row-gap: 33px;
+
   @media (max-width: 1024px) {
-    grid-row-gap: 32px;
-    row-gap: 32px;
+    column-gap: 20px;
   }
 
   @media (max-width: 768px) {
-    gap: 31px;
+    row-gap: 31px;
   }
+}
+
+.radio {
+  gap: 8px;
 }
 
 .agreement {
   @extend .p-small;
   color: var(--gray-300);
 
-  a {
+  & * {
     color: var(--black);
   }
 }
 
-.btns {
+.group {
+  gap: 32px;
   flex-shrink: 1;
 
   @media (max-width: 768px) {
+    gap: 30px;
+  }
+}
+
+.btns {
+  gap: 30px;
+
+  @media (max-width: 375px) {
     gap: 10px;
   }
+}
+
+.link:active {
+  color: var(--green-400);
 }

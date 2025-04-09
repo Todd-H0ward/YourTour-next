@@ -4,9 +4,12 @@
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 29px 0;
+  padding: 28px 0;
   color: var(--white);
-  transition: all 0.3s;
+  transition:
+    color 0.4s ease-in-out,
+    background 0.3s ease-in,
+    backdrop-filter 0.5s ease-in;
 
   &.fixed {
     position: fixed;
@@ -24,7 +27,7 @@
   }
 
   @media (max-width: 375px) {
-    padding: 33px 0;
+    padding: 28px 0;
   }
 }
 
@@ -39,7 +42,10 @@
 }
 
 .logo {
-  width: clamp(133px, 19vw, 182px);
+  display: flex;
+  & * {
+    width: clamp(133px, 19vw, 182px);
+  }
 }
 
 .menu {

@@ -5,9 +5,15 @@
   cursor: pointer;
   border-radius: var(--border-radius-change);
 
-  &:hover {
-    .image {
-      transform: scale(1.2);
+  @media (hover: hover) {
+    &:hover {
+      .image {
+        transform: scale(1.2);
+      }
+
+      .btn {
+        background: var(--green-400);
+      }
     }
   }
 }
@@ -17,7 +23,7 @@
   height: 100%;
   object-fit: cover;
   object-position: 40%;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .content {
@@ -42,10 +48,22 @@
   }
 }
 
+.title {
+  max-width: 230px;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
+}
+
 .price {
   margin-bottom: auto;
 }
 
 .btn {
   transform: translate(-20px, 7px);
+
+  &:active {
+    background: var(--orange-200) !important;
+  }
 }

@@ -1,41 +1,48 @@
-import Container from '@/components/commons/Container/Container';
-import Flex from '@/components/commons/Flex/Flex';
-import styles from './Info.module.scss';
 import Image from 'next/image';
-import Title from '@/components/commons/Title/Title';
-import Text from '@/components/commons/Text/Text';
-import Grid from '@/components/commons/Grid/Grid';
+
+import Button from '@/components/commons/Button';
+import Container from '@/components/commons/Container';
+import Flex from '@/components/commons/Flex';
+import Grid from '@/components/commons/Grid';
+import Section from '@/components/commons/Section';
+import Text from '@/components/commons/Text';
+import Title from '@/components/commons/Title';
+
+import styles from './Info.module.scss';
 
 const Info = () => {
   return (
-    <section>
+    <Section>
       <Container small>
         <Grid
-          className={styles.container}
+          className={styles.content}
           breakpoints={{ large: 2, big: 2, small: 1 }}
-          gap={30}
         >
           <Image
             className={styles.image}
-            src="/images/info.jpg"
+            src="/info.jpg"
             alt="info"
             width={370}
             height={370}
           />
-          <Flex className={styles.info} vertical gap={20} justify="center">
-            <Title mb={0} size="small" align="left">
+          <Flex className={styles.info} vertical justify="center">
+            <Title size="small" align="left">
               Пора в путешествие вместе с нами!
             </Title>
             <Text className={styles.text}>
               Напиши на почту и узнай подробности на{' '}
-              <a className={styles.link} href="mailto:yourtour@gmail.com">
+              <Button
+                variant="link"
+                className={styles.link}
+                href="mailto:yourtour@gmail.com"
+              >
                 yourtour@gmail.com
-              </a>
+              </Button>
             </Text>
           </Flex>
         </Grid>
       </Container>
-    </section>
+    </Section>
   );
 };
 

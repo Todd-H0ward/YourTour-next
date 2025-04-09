@@ -1,13 +1,4 @@
-@use '@/assets/styles/typography';
-
-.title {
-  margin-bottom: var(--mb);
-  max-width: var(--w, 100%);
-
-  @media (max-width: 1024px) {
-    max-width: 100%;
-  }
-}
+@use '@/styles/typography';
 
 .big {
   @extend .h1;
@@ -15,9 +6,9 @@
 
 .normal {
   @extend .h2;
-  margin-bottom: var(--mb, 30px);
+  margin-bottom: 30px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 375px) {
     margin-bottom: 20px;
   }
 }

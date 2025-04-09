@@ -1,5 +1,7 @@
-import styles from './Container.module.scss';
 import clsx from 'clsx';
+import { bool, node, string } from 'prop-types';
+
+import styles from './Container.module.scss';
 
 const Container = ({
   fullWidth = false,
@@ -19,6 +21,13 @@ const Container = ({
       {children}
     </div>
   );
+};
+
+Container.propTypes = {
+  fullWidth: bool,
+  small: bool,
+  children: node.isRequired,
+  className: string,
 };
 
 export default Container;

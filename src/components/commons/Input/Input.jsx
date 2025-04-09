@@ -1,5 +1,7 @@
-import styles from './Input.module.scss';
 import clsx from 'clsx';
+import { func, string } from 'prop-types';
+
+import styles from './Input.module.scss';
 
 const Input = ({ value, onChange, label, type = 'text', ...props }) => {
   return (
@@ -14,6 +16,13 @@ const Input = ({ value, onChange, label, type = 'text', ...props }) => {
       />
     </label>
   );
+};
+
+Input.propTypes = {
+  value: string.isRequired,
+  onChange: func.isRequired,
+  label: string.isRequired,
+  type: string,
 };
 
 export default Input;

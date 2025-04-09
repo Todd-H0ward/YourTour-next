@@ -1,7 +1,25 @@
+.title {
+  max-width: 530px;
+}
+
 .description {
+  max-width: 400px;
+  margin-bottom: 100px;
   color: var(--gray-300);
 
   @media (max-width: 768px) {
     margin-bottom: 50px;
+  }
+}
+
+.content {
+  gap: 30px;
+
+  @media (max-width: 1024px) {
+    column-gap: 20px;
+  }
+
+  @media (max-width: 375px) {
+    gap: 18px;
   }
 }
