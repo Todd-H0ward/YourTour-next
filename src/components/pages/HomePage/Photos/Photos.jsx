@@ -22,14 +22,14 @@ const Photos = () => {
             кадров
           </Text>
           <Grid
-            className={styles.container}
+            className={styles.content}
             breakpoints={{ large: 20, big: 12, small: 6 }}
           >
             {photos.map((photo) => (
               <div key={photo.id} className={styles.wrapper}>
                 <Image
                   src={photo.image}
-                  width={444}
+                  width={450}
                   height={301}
                   alt={photo.alt}
                   className={styles.photo}

@@ -13,7 +13,7 @@ const ReviewCard = ({ review }) => {
       <Flex className={styles.inner} vertical justify="between" align="stretch">
         <Flex className={styles.comment} vertical>
           {review.comment.split('\n').map((text) => (
-            <Text key={text} size="big" align="left">
+            <Text key={text} className={styles.text} size="big" align="left">
               {text}
             </Text>
           ))}

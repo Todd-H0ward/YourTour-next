@@ -11,6 +11,10 @@
 
 .text {
   white-space: pre-line;
+
+  @media (max-width: 768px) {
+    line-height: 144%;
+  }
 }
 
 .avatar {
@@ -33,6 +37,6 @@
   gap: 28px;
 
   @media (max-width: 768px) {
-    gap: 25px;
+    gap: 21px;
   }
 }

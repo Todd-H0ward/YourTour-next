@@ -1,7 +1,15 @@
 .footer {
-  padding: clamp(21px, 0.987rem + 1.39vw, 30px) 0;
+  padding: 30px 0;
   color: var(--gray-300);
   background: var(--beige-200);
+
+  @media (max-width: 1024px) {
+    padding: 30px 0;
+  }
+
+  @media (max-width: 375px) {
+    padding: 21px 0;
+  }
 }
 
 .content {
@@ -16,7 +24,7 @@
   gap: 25px;
 
   @media (max-width: 375px) {
-    gap: 12px;
+    gap: 14px;
   }
 }
 
@@ -24,10 +32,15 @@
   gap: 11px;
 
   @media (max-width: 375px) {
-    gap: 2px;
+    gap: 3px;
   }
 }
 
 .link {
   color: var(--black);
+  gap: 6px;
+
+  &:active {
+    color: var(--orange-200);
+  }
 }

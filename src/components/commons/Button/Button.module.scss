@@ -5,11 +5,12 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  white-space: nowrap;
   flex-shrink: 1;
   width: auto;
   cursor: pointer;
-  transition: background 0.3s;
+  transition:
+    background 0.3s,
+    color 0.3s;
 }
 
 .solid,
@@ -52,6 +53,7 @@
 }
 
 .link {
+  display: inline;
   position: relative;
 
   &::after {
@@ -68,8 +70,10 @@
     content: '';
   }
 
-  &:hover:after {
-    width: 100%;
+  @media (hover: hover) {
+    &:hover:after {
+      width: 100%;
+    }
   }
 }
 

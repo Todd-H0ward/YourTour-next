@@ -138,8 +138,8 @@ const Form = () => {
         <Checkbox
           label={
             <span className={styles.agreement}>
-              Нажимая кнопку, я принимаю условия{' '}
-              <Button variant="link" href="#">
+              Нажимая кнопку, я принимаю условия&nbsp;
+              <Button className={styles.link} variant="link" href="#">
                 Лицензионного договора
               </Button>
             </span>
@@ -147,7 +147,7 @@ const Form = () => {
           checked={form.isAgree}
           onChange={(e) => handleChange('isAgree', e.target.checked)}
         />
-        <Flex className={styles.group}>
+        <Flex className={styles.btns}>
           <Button type="submit">Найти тур</Button>
           <Button type="reset" variant="filled">
             Сбросить

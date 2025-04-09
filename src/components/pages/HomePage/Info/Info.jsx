@@ -15,7 +15,7 @@ const Info = () => {
     <Section>
       <Container small>
         <Grid
-          className={styles.grid}
+          className={styles.content}
           breakpoints={{ large: 2, big: 2, small: 1 }}
         >
           <Image

@@ -11,10 +11,10 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <Container>
-        <Flex justify="between" className={styles.content}>
+        <Flex justify="between" align="center" className={styles.content}>
           <Text>Наши социальные сети</Text>
 
-          <Flex className={styles.wrapper}>
+          <Flex align="center" className={styles.wrapper}>
             {socialLinks.map((link) => (
               <Flex key={link.title} className={styles.item} align="center">
                 {link.icon}

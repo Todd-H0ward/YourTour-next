@@ -1,11 +1,11 @@
 .hero {
-  padding: 207px 0 119px;
+  padding: 206px 0 120px;
   background: url('/hero-bg.jpg') no-repeat center;
   background-size: cover;
   color: var(--white);
 
   @media (max-width: 1024px) {
-    padding: 208px 0 119px;
+    padding: 206px 0 120px;
   }
 
   @media (max-width: 375px) {

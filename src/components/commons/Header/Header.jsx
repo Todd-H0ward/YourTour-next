@@ -40,9 +40,9 @@ const Header = () => {
   return (
     <header className={clsx(styles.header, isStickyHeader && styles.fixed)}>
       <Container className={styles.container}>
-        <Flex justify="between" align="start">
-          <Link href="/">
-            <Logo className={styles.logo} />
+        <Flex justify="between" align="center">
+          <Link className={styles.logo} href="/">
+            <Logo />
           </Link>
 
           <Menu className={styles.menu} items={menuItems} />

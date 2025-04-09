@@ -4,21 +4,21 @@
   color: var(--gray-300);
 
   @media (max-width: 768px) {
-    margin-bottom: 50px;
+    margin-bottom: 49px;
   }
 }
 
-.container {
+.content {
   gap: 30px;
 
   @media (max-width: 1024px) {
-    grid-column-gap: clamp(10px, 1.053rem + 0.31vw, 20px);
-    grid-row-gap: clamp(18px, 0.692rem + 1.85vw, 30px);
+    column-gap: 20px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 768px) {
     grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 10px;
+    column-gap: 10px;
+    row-gap: 18px;
   }
 }
 
@@ -59,6 +59,14 @@
   @media (max-width: 768px) {
     grid-column: span 3;
     min-height: 110px;
+
+    &:nth-child(1) {
+      margin-right: 4px;
+    }
+
+    &:nth-child(4) {
+      margin-left: 4px;
+    }
 
     &:nth-child(6),
     &:nth-child(8),

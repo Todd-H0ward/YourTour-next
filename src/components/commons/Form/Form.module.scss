@@ -11,7 +11,7 @@
   );
 
   @media (max-width: 768px) {
-    padding: 20px 20px 40px;
+    padding: 21px 20px 40px;
   }
 }
 
@@ -20,12 +20,11 @@
   row-gap: 33px;
 
   @media (max-width: 1024px) {
-    grid-row-gap: 32px;
-    row-gap: 32px;
+    column-gap: 20px;
   }
 
   @media (max-width: 768px) {
-    gap: 31px;
+    row-gap: 31px;
   }
 }
 
@@ -37,16 +36,28 @@
   @extend .p-small;
   color: var(--gray-300);
 
-  a {
+  & * {
     color: var(--black);
   }
 }
 
 .group {
-  gap: 30px;
+  gap: 32px;
   flex-shrink: 1;
 
   @media (max-width: 768px) {
+    gap: 30px;
+  }
+}
+
+.btns {
+  gap: 30px;
+
+  @media (max-width: 375px) {
     gap: 10px;
   }
+}
+
+.link:active {
+  color: var(--green-400);
 }

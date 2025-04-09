@@ -5,13 +5,15 @@
   cursor: pointer;
   border-radius: var(--border-radius-change);
 
-  &:hover {
-    .image {
-      transform: scale(1.2);
-    }
+  @media (hover: hover) {
+    &:hover {
+      .image {
+        transform: scale(1.2);
+      }
 
-    .btn {
-      background: var(--green-400);
+      .btn {
+        background: var(--green-400);
+      }
     }
   }
 }
@@ -60,4 +62,8 @@
 
 .btn {
   transform: translate(-20px, 7px);
+
+  &:active {
+    background: var(--orange-200) !important;
+  }
 }

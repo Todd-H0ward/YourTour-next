@@ -6,13 +6,15 @@
   overflow: hidden;
   cursor: pointer;
 
-  &:hover {
-    .image {
-      transform: scale(1.2);
-    }
+  @media (hover: hover) {
+    &:hover {
+      .image {
+        transform: scale(1.2);
+      }
 
-    .btn {
-      background: var(--green-400);
+      .btn {
+        background: var(--green-400);
+      }
     }
   }
 }
@@ -42,7 +44,7 @@
 
 .title {
   max-width: 555px;
-  margin-bottom: 35px;
+  margin-bottom: 37px;
 
   @media (max-width: 375px) {
     max-width: 150px;
@@ -52,7 +54,12 @@
 
 .description {
   max-width: 555px;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
+
+  @media (max-width: 375px) {
+    line-height: 145%;
+    margin-bottom: 23px;
+  }
 }
 
 .list {
@@ -66,6 +73,10 @@
 
 .btn {
   transform: translate(-20px, 7px);
+
+  &:active {
+    background: var(--orange-200) !important;
+  }
 }
 
 .links {

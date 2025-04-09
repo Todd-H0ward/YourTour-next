@@ -41,7 +41,7 @@ const Tours = () => {
         </Title>
         <Tabs className={styles.tabs} items={tabsItems} />
 
-        <Grid className={styles.grid}>
+        <Grid className={styles.content}>
           {tours.map((tour) => (
             <TourCard key={tour.id} tour={tour} />
           ))}
