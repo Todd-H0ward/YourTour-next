@@ -16,14 +16,6 @@
     color: var(--black);
     background: rgba(243, 239, 232, 0.6);
     backdrop-filter: blur(27px);
-
-    .logo {
-      filter: invert(1);
-    }
-
-    & *::after {
-      background-color: var(--black);
-    }
   }
 
   @media (max-width: 375px) {
