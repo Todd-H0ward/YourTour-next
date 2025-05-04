@@ -15,6 +15,12 @@
         background: var(--green-400);
       }
     }
+
+    &:active {
+      .btn {
+        background: var(--orange-200);
+      }
+    }
   }
 }
 
@@ -62,8 +68,4 @@
 
 .btn {
   transform: translate(-20px, 7px);
-
-  &:active {
-    background: var(--orange-200) !important;
-  }
 }
