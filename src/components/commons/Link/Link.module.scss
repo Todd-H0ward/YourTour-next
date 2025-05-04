@@ -1,0 +1,16 @@
+@use "@/styles/extends";
+
+.link {
+  position: relative;
+  display: inline;
+
+  &::after {
+    @extend .underline;
+  }
+
+  @media (hover: hover) {
+    &:hover:after {
+      width: 100%;
+    }
+  }
+}

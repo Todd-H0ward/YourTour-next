@@ -3,6 +3,7 @@ import { arrayOf, number, shape, string } from 'prop-types';
 
 import Button from '@/components/commons/Button';
 import Flex from '@/components/commons/Flex';
+import Link from '@/components/commons/Link';
 import Text from '@/components/commons/Text';
 import Title from '@/components/commons/Title';
 
@@ -46,9 +47,9 @@ const HistoryCard = ({ history }) => {
           <Flex className={styles.links}>
             {socials &&
               socials.map((social) => (
-                <Button key={social.type} variant="link" href={social.url}>
+                <Link key={social.type} href={social.url}>
                   {social.type}
-                </Button>
+                </Link>
               ))}
           </Flex>
         </Flex>

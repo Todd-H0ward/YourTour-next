@@ -7,6 +7,7 @@ import Checkbox from '@/components/commons/Checkbox';
 import Flex from '@/components/commons/Flex';
 import Grid from '@/components/commons/Grid';
 import Input from '@/components/commons/Input';
+import Link from '@/components/commons/Link';
 import Radio from '@/components/commons/Radio';
 import Select from '@/components/commons/Select';
 import Text from '@/components/commons/Text';
@@ -139,9 +140,9 @@ const Form = () => {
           label={
             <span className={styles.agreement}>
               Нажимая кнопку, я принимаю условия&nbsp;
-              <Button className={styles.link} variant="link" href="#">
+              <Link className={styles.link} href="#">
                 Лицензионного договора
-              </Button>
+              </Link>
             </span>
           }
           checked={form.isAgree}

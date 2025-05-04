@@ -1,10 +1,9 @@
 'use client';
 
 import clsx from 'clsx';
-import Link from 'next/link';
 
-import Button from '@/components/commons/Button';
 import Flex from '@/components/commons/Flex';
+import Link from '@/components/commons/Link';
 import Menu from '@/components/commons/Menu';
 import { Logo } from '@/components/icons';
 
@@ -45,9 +44,7 @@ const Header = () => {
 
         <Menu className={styles.menu} items={menuItems} />
 
-        <Button variant="link" href="tel:89999999999">
-          +7 999 999 99 99
-        </Button>
+        <Link href="tel:89999999999">+7 999 999 99 99</Link>
       </Flex>
     </header>
   );

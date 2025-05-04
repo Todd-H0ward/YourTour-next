@@ -1,6 +1,5 @@
 import clsx from 'clsx';
-import Link from 'next/link';
-import { bool, node, oneOf, string } from 'prop-types';
+import { bool, func, node, oneOf, string } from 'prop-types';
 
 import { Arrow } from '@/components/icons';
 
@@ -9,21 +8,20 @@ import styles from './Button.module.scss';
 const variantClasses = {
   solid: styles.solid,
   filled: styles.filled,
-  link: styles.link,
+  clear: styles.clear,
 };
 
 const Button = ({
   variant = 'solid',
   withIcon = false,
   small = false,
+  onClick,
   children,
   className,
   ...props
 }) => {
-  const Component = props.href ? Link : 'button';
-
   return (
-    <Component
+    <button
       className={clsx(
         styles.btn,
         variantClasses[variant],
@@ -31,18 +29,20 @@ const Button = ({
         small && styles.small,
         className,
       )}
+      onClick={onClick}
       {...props}
     >
       {children}
       {withIcon && <Arrow />}
-    </Component>
+    </button>
   );
 };
 
 Button.propTypes = {
-  variant: oneOf(['solid', 'filled', 'link']),
+  variant: oneOf(['solid', 'filled', 'clear']),
   withIcon: bool,
   small: bool,
+  onClick: func,
   children: node.isRequired,
   className: string,
 };

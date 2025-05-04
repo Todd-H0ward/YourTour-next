@@ -1,4 +1,5 @@
 @use '@/styles/typography';
+@use '@/styles/extends';
 
 .tabs {
   column-gap: 31px;
@@ -10,9 +11,21 @@
 }
 
 .tab {
+  position: relative;
   padding-bottom: 5px;
   @extend .p-big;
   cursor: pointer;
+
+  &:after {
+    @extend .underline;
+    height: 2px;
+  }
+
+  @media (hover: hover) {
+    &:hover:after {
+      width: 100%;
+    }
+  }
 
   @media (max-width: 1024px) {
     padding-bottom: 6px;

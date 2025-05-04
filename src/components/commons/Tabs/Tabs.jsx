@@ -18,8 +18,8 @@ const Tabs = ({ items, className }) => {
     <Flex wrap justify="center" className={clsx(styles.tabs, className)}>
       {items.map((item) => (
         <Button
-          variant="link"
           key={item.id}
+          variant="clear"
           className={clsx(styles.tab, activeTab === item.id && styles.active)}
           onClick={() => handleTabClick(item.id)}
         >

@@ -1,7 +1,7 @@
 import { arrayOf, shape, string } from 'prop-types';
 
-import Button from '@/components/commons/Button';
 import Flex from '@/components/commons/Flex';
+import Link from '@/components/commons/Link';
 
 import styles from './Menu.module.scss';
 
@@ -10,9 +10,9 @@ const Menu = ({ items, className }) => {
     <nav className={className}>
       <Flex className={styles.list}>
         {items.map((item) => (
-          <Button variant="link" key={item.title} href={item.href}>
+          <Link key={item.title} href={item.href}>
             {item.title}
-          </Button>
+          </Link>
         ))}
       </Flex>
     </nav>

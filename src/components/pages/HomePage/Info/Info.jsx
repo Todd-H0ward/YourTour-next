@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
-import Button from '@/components/commons/Button';
 import Flex from '@/components/commons/Flex';
 import Grid from '@/components/commons/Grid';
+import Link from '@/components/commons/Link';
 import Section from '@/components/commons/Section';
 import Text from '@/components/commons/Text';
 import Title from '@/components/commons/Title';
@@ -29,13 +29,9 @@ const Info = () => {
           </Title>
           <Text className={styles.text}>
             Напиши на почту и узнай подробности на{' '}
-            <Button
-              variant="link"
-              className={styles.link}
-              href="mailto:yourtour@gmail.com"
-            >
+            <Link className={styles.link} href="mailto:yourtour@gmail.com">
               yourtour@gmail.com
-            </Button>
+            </Link>
           </Text>
         </Flex>
       </Grid>

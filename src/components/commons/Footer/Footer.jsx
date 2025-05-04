@@ -1,5 +1,5 @@
-import Button from '@/components/commons/Button';
 import Flex from '@/components/commons/Flex';
+import Link from '@/components/commons/Link';
 import Text from '@/components/commons/Text';
 
 import socialLinks from '@/constants/socialLinks';
@@ -16,14 +16,9 @@ const Footer = () => {
           {socialLinks.map((link) => (
             <Flex key={link.title} className={styles.item} align="center">
               {link.icon}
-              <Button
-                variant="link"
-                className={styles.link}
-                href={link.link}
-                target="_blank"
-              >
+              <Link className={styles.link} href={link.link}>
                 {link.title}
-              </Button>
+              </Link>
             </Flex>
           ))}
         </Flex>
