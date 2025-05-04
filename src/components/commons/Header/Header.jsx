@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import Link from 'next/link';
 
 import Button from '@/components/commons/Button';
-import Container from '@/components/commons/Container';
 import Flex from '@/components/commons/Flex';
 import Menu from '@/components/commons/Menu';
 import { Logo } from '@/components/icons';
@@ -39,19 +38,17 @@ const Header = () => {
 
   return (
     <header className={clsx(styles.header, isStickyHeader && styles.fixed)}>
-      <Container className={styles.container}>
-        <Flex justify="between" align="center">
-          <Link className={styles.logo} href="/">
-            <Logo />
-          </Link>
+      <Flex className={styles.inner} justify="between" align="center">
+        <Link className={styles.logo} href="/">
+          <Logo />
+        </Link>
 
-          <Menu className={styles.menu} items={menuItems} />
+        <Menu className={styles.menu} items={menuItems} />
 
-          <Button variant="link" href="tel:89999999999">
-            +7 999 999 99 99
-          </Button>
-        </Flex>
-      </Container>
+        <Button variant="link" href="tel:89999999999">
+          +7 999 999 99 99
+        </Button>
+      </Flex>
     </header>
   );
 };

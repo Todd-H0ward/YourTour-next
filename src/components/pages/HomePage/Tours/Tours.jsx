@@ -1,4 +1,3 @@
-import Container from '@/components/commons/Container';
 import Grid from '@/components/commons/Grid';
 import Section from '@/components/commons/Section';
 import Tabs from '@/components/commons/Tabs';
@@ -35,18 +34,16 @@ const tabsItems = [
 const Tours = () => {
   return (
     <Section id="tours">
-      <Container>
-        <Title className={styles.title} size="normal" align="center">
-          Выбери свой тур
-        </Title>
-        <Tabs className={styles.tabs} items={tabsItems} />
+      <Title className={styles.title} size="normal" align="center">
+        Выбери свой тур
+      </Title>
+      <Tabs className={styles.tabs} items={tabsItems} />
 
-        <Grid className={styles.content}>
-          {tours.map((tour) => (
-            <TourCard key={tour.id} tour={tour} />
-          ))}
-        </Grid>
-      </Container>
+      <Grid className={styles.content}>
+        {tours.map((tour) => (
+          <TourCard key={tour.id} tour={tour} />
+        ))}
+      </Grid>
     </Section>
   );
 };

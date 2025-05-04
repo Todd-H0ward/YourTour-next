@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 import Button from '@/components/commons/Button';
-import Container from '@/components/commons/Container';
 import Flex from '@/components/commons/Flex';
 import Grid from '@/components/commons/Grid';
 import Section from '@/components/commons/Section';
@@ -12,36 +11,34 @@ import styles from './Info.module.scss';
 
 const Info = () => {
   return (
-    <Section>
-      <Container small>
-        <Grid
-          className={styles.content}
-          breakpoints={{ large: 2, big: 2, small: 1 }}
-        >
-          <Image
-            className={styles.image}
-            src="/info.jpg"
-            alt="info"
-            width={370}
-            height={370}
-          />
-          <Flex className={styles.info} vertical justify="center">
-            <Title size="small" align="left">
-              Пора в путешествие вместе с нами!
-            </Title>
-            <Text className={styles.text}>
-              Напиши на почту и узнай подробности на{' '}
-              <Button
-                variant="link"
-                className={styles.link}
-                href="mailto:yourtour@gmail.com"
-              >
-                yourtour@gmail.com
-              </Button>
-            </Text>
-          </Flex>
-        </Grid>
-      </Container>
+    <Section small>
+      <Grid
+        className={styles.content}
+        breakpoints={{ large: 2, big: 2, small: 1 }}
+      >
+        <Image
+          className={styles.image}
+          src="/info.jpg"
+          alt="info"
+          width={370}
+          height={370}
+        />
+        <Flex className={styles.info} vertical justify="center">
+          <Title size="small" align="left">
+            Пора в путешествие вместе с нами!
+          </Title>
+          <Text className={styles.text}>
+            Напиши на почту и узнай подробности на{' '}
+            <Button
+              variant="link"
+              className={styles.link}
+              href="mailto:yourtour@gmail.com"
+            >
+              yourtour@gmail.com
+            </Button>
+          </Text>
+        </Flex>
+      </Grid>
     </Section>
   );
 };

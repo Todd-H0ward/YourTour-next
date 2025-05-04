@@ -1,20 +1,10 @@
-.container {
-  --padding: 57px;
-  max-width: calc(1170px + var(--padding) * 2);
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 var(--padding);
+@use "@/styles/extends";
 
-  @media (max-width: 1024px) {
-    --padding: 53px;
-  }
-
-  @media (max-width: 768px) {
-    --padding: 21px;
-  }
+.section {
+  @extend .container;
 }
 
-.full {
+.large {
   max-width: 1920px;
   padding: 0 30px;
 
@@ -34,4 +24,8 @@
   @media (max-width: 768px) {
     --padding: 21px;
   }
+}
+
+.full {
+  max-width: 100%;
 }

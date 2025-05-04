@@ -1,3 +1,5 @@
+@use "@/styles/extends";
+
 .header {
   position: absolute;
   top: 0;
@@ -23,7 +25,9 @@
   }
 }
 
-.container {
+.inner {
+  @extend .container;
+
   @media (max-width: 1024px) {
     padding: 0 clamp(20px, -0.086rem + 5.7vw, 57px) !important;
   }
