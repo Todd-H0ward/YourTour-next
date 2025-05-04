@@ -1,8 +1,8 @@
 .card {
   position: relative;
+  height: clamp(455px, 24.393rem + 17.26vw, 567px);
   color: var(--white);
   border-radius: var(--border-radius-change);
-  height: clamp(455px, 24.393rem + 17.26vw, 567px);
   overflow: hidden;
   cursor: pointer;
 
@@ -63,8 +63,8 @@
 }
 
 .list {
-  list-style: disc;
   padding-left: 29px;
+  list-style: disc;
 
   @media (max-width: 375px) {
     padding-left: 26px;

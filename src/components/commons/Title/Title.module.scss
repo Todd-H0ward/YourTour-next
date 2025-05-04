@@ -5,8 +5,8 @@
 }
 
 .normal {
-  @extend .h2;
   margin-bottom: 30px;
+  @extend .h2;
 
   @media (max-width: 375px) {
     margin-bottom: 20px;

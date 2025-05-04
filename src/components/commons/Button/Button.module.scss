@@ -1,12 +1,12 @@
 @use '@/styles/typography';
 
 .btn {
+  width: auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
   flex-shrink: 1;
-  width: auto;
   cursor: pointer;
   transition:
     background 0.3s,
@@ -53,8 +53,8 @@
 }
 
 .link {
-  display: inline;
   position: relative;
+  display: inline;
 
   &::after {
     position: absolute;
@@ -80,9 +80,9 @@
 .btn.withIcon {
   width: auto;
   padding: 7px 20px;
-  background: none;
   @extend .p-big;
   font-weight: 700;
+  background: none;
   border-radius: var(--border-radius);
   cursor: pointer;
 }

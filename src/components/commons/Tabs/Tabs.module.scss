@@ -10,9 +10,9 @@
 }
 
 .tab {
+  padding-bottom: 5px;
   @extend .p-big;
   cursor: pointer;
-  padding-bottom: 5px;
 
   @media (max-width: 1024px) {
     padding-bottom: 6px;

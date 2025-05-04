@@ -23,11 +23,11 @@
 }
 
 .wrapper {
+  min-height: 301px;
   display: flex;
   align-items: stretch;
   justify-content: center;
   grid-column: span 5;
-  min-height: 301px;
   border-radius: var(--border-radius-change);
   overflow: hidden;
 

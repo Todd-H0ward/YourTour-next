@@ -9,12 +9,12 @@
 }
 
 .checkbox {
-  flex: none;
   width: 26px;
   aspect-ratio: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: none;
   border: 2px solid var(--black);
   border-radius: 5px;
   cursor: pointer;
