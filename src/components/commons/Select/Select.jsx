@@ -4,11 +4,12 @@ import clsx from 'clsx';
 import { arrayOf, func, string } from 'prop-types';
 import { useState } from 'react';
 
+import Text from '@/components/commons/Text';
 import { DownArrow } from '@/components/icons';
 
 import styles from './Select.module.scss';
 
-const Select = ({ label, placeholder, items, value, onChange }) => {
+const Select = ({ label, placeholder, items, value, onChange, error }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => setIsOpen((prev) => !prev);
@@ -18,7 +19,11 @@ const Select = ({ label, placeholder, items, value, onChange }) => {
       {label}
       <div className={styles.wrapper}>
         <select
-          className={clsx(styles.select, value && styles.selected)}
+          className={clsx(
+            styles.select,
+            value && styles.selected,
+            error && styles.error,
+          )}
           value={value}
           onChange={onChange}
           onClick={toggleOpen}
@@ -35,6 +40,11 @@ const Select = ({ label, placeholder, items, value, onChange }) => {
         </select>
         <DownArrow className={clsx(styles.icon, isOpen && styles.open)} />
       </div>
+      {error && (
+        <Text className={styles.message} size="small">
+          {error}
+        </Text>
+      )}
     </label>
   );
 };
@@ -45,6 +55,7 @@ Select.propTypes = {
   items: arrayOf(string).isRequired,
   value: string.isRequired,
   onChange: func.isRequired,
+  error: string,
 };
 
 export default Select;

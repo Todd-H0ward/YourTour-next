@@ -5,12 +5,12 @@ import { CheckboxArrow } from '@/components/icons';
 
 import styles from './Checkbox.module.scss';
 
-const Checkbox = ({ label, checked, onChange, className }) => {
+const Checkbox = ({ label, checked, onChange, error, className }) => {
   return (
     <label className={styles.label}>
       <div className={styles.wrapper}>
         <input
-          className={clsx(styles.checkbox, className)}
+          className={clsx(styles.checkbox, error && styles.error, className)}
           type="checkbox"
           checked={checked}
           onChange={onChange}
@@ -28,6 +28,7 @@ Checkbox.propTypes = {
   label: node.isRequired,
   checked: bool.isRequired,
   onChange: func.isRequired,
+  error: bool,
   className: string,
 };
 
