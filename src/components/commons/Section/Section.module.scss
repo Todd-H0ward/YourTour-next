@@ -1,0 +1,31 @@
+@use "@/styles/extends";
+
+.root {
+  @extend .container;
+}
+
+.large {
+  max-width: 1920px;
+  padding: 0 30px;
+
+  @media (max-width: 1024px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 375px) {
+    padding: 0 21px;
+  }
+}
+
+.small {
+  --padding: 57px;
+  max-width: calc(771px + var(--padding) * 2);
+
+  @media (max-width: 768px) {
+    --padding: 21px;
+  }
+}
+
+.full {
+  max-width: 100%;
+}

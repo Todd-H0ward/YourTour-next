@@ -4,17 +4,19 @@
   gap: 8px;
 }
 
-.textarea {
+.root {
+  height: clamp(132px, 7.528rem + 3.08vw, 152px);
+  padding: clamp(10px, 0.264rem + 1.54vw, 20px);
   overflow-y: auto;
   overflow-x: hidden;
   white-space: pre-wrap;
   word-wrap: break-word;
-  height: clamp(132px, 7.528rem + 3.08vw, 152px);
-  padding: clamp(10px, 0.264rem + 1.54vw, 20px);
   background: var(--beige-100);
   border: 1px solid var(--beige-200);
   border-radius: 10px;
-  transition: all 0.3s;
+  transition:
+    color 0.3s,
+    background 0.3s;
 
   &::placeholder {
     color: var(--gray-300);

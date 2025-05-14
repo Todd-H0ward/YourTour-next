@@ -1,0 +1,29 @@
+.container {
+  --padding: 57px;
+  max-width: calc(1170px + var(--padding) * 2);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--padding);
+
+  @media (max-width: 1024px) {
+    --padding: 53px;
+  }
+
+  @media (max-width: 768px) {
+    --padding: 21px;
+  }
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 0;
+  height: 1px;
+  margin: 0 auto;
+  background: currentColor;
+  transition: width 0.3s;
+  content: '';
+}

@@ -1,7 +1,10 @@
-@use '@/assets/styles/typography';
-@use '@/assets/styles/helpers';
+@use '@/styles/typography';
+@use '@/styles/extends';
 
-.tabs {
+.root {
+  column-gap: 31px;
+  row-gap: 10px;
+
   @media (max-width: 768px) {
     column-gap: 10px;
   }
@@ -9,9 +12,9 @@
 
 .tab {
   position: relative;
+  padding-bottom: 5px;
   @extend .p-big;
   cursor: pointer;
-  padding-bottom: 5px;
 
   &:after {
     @extend .underline;
@@ -19,7 +22,7 @@
   }
 
   @media (hover: hover) {
-    &:hover::after {
+    &:hover:after {
       width: 100%;
     }
   }
@@ -38,6 +41,5 @@
 
   &::after {
     width: 100%;
-    background: var(--orange-200);
   }
 }

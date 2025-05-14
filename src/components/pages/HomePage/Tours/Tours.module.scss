@@ -1,13 +1,27 @@
 .title {
+  margin-bottom: 35px;
+
   @media (max-width: 375px) {
-    margin-bottom: 30px !important;
+    margin-bottom: 30px;
   }
 }
 
 .tabs {
-  margin-bottom: 100px;
+  margin-bottom: 101px;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 100px;
+  }
 
   @media (max-width: 768px) {
-    margin-bottom: 50px;
+    margin-bottom: 49px;
+  }
+}
+
+.content {
+  gap: 30px;
+
+  @media (max-width: 1024px) {
+    gap: 18px;
   }
 }

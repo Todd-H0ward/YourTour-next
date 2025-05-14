@@ -1,14 +1,26 @@
-.card {
+.root {
   position: relative;
+  height: clamp(455px, 24.393rem + 17.26vw, 567px);
   color: var(--white);
   border-radius: var(--border-radius-change);
-  height: clamp(455px, 24.393rem + 17.26vw, 567px);
   overflow: hidden;
   cursor: pointer;
 
-  &:hover {
-    .image {
-      transform: scale(1.2);
+  @media (hover: hover) {
+    &:hover {
+      .image {
+        transform: scale(1.2);
+      }
+
+      .btn {
+        background: var(--green-400);
+      }
+    }
+
+    &:active {
+      .btn {
+        background: var(--orange-200)
+      }
     }
   }
 }
@@ -18,7 +30,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .content {
@@ -37,15 +49,28 @@
 }
 
 .title {
+  max-width: 555px;
+  margin-bottom: 37px;
+
   @media (max-width: 375px) {
     max-width: 150px;
     margin-bottom: 20px;
   }
 }
 
+.description {
+  max-width: 555px;
+  margin-bottom: 28px;
+
+  @media (max-width: 375px) {
+    line-height: 145%;
+    margin-bottom: 23px;
+  }
+}
+
 .list {
-  list-style: disc;
   padding-left: 29px;
+  list-style: disc;
 
   @media (max-width: 375px) {
     padding-left: 26px;
@@ -57,29 +82,9 @@
 }
 
 .links {
+  gap: 36px;
+
   @media (max-width: 768px) {
     display: none;
-  }
-}
-
-.link {
-  position: relative;
-
-  &:after {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    display: block;
-    width: 0;
-    height: 1px;
-    background: var(--white);
-    transition: width 0.2s;
-    content: '';
-  }
-
-  &:hover::after {
-    width: 100%;
   }
 }

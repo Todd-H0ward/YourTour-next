@@ -1,13 +1,25 @@
-.card {
+.root {
   position: relative;
   height: clamp(318px, 12.183rem + 32.82vw, 531px);
   overflow: hidden;
   cursor: pointer;
   border-radius: var(--border-radius-change);
 
-  &:hover {
-    .image {
-      transform: scale(1.2);
+  @media (hover: hover) {
+    &:hover {
+      .image {
+        transform: scale(1.2);
+      }
+
+      .btn {
+        background: var(--green-400);
+      }
+    }
+
+    &:active {
+      .btn {
+        background: var(--orange-200);
+      }
     }
   }
 }
@@ -17,7 +29,7 @@
   height: 100%;
   object-fit: cover;
   object-position: 40%;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .content {
@@ -39,6 +51,14 @@
 
   @media (max-width: 1024px) {
     padding: clamp(25px, 0.66rem + 3.85vw, 50px);
+  }
+}
+
+.title {
+  max-width: 230px;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
   }
 }
 

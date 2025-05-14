@@ -1,42 +1,34 @@
 'use client';
 
-import Grid from '@/components/commons/Grid/Grid';
-import Input from '@/components/commons/Input/Input';
+import { Controller, useForm } from 'react-hook-form';
+
+import Button from '@/components/commons/Button';
+import Checkbox from '@/components/commons/Checkbox';
+import Flex from '@/components/commons/Flex';
+import Grid from '@/components/commons/Grid';
+import Input from '@/components/commons/Input';
+import Link from '@/components/commons/Link';
+import Radio from '@/components/commons/Radio';
+import Select from '@/components/commons/Select';
+import Text from '@/components/commons/Text';
+import Textarea from '@/components/commons/Textarea';
+
+import formatPhoneNumber from '@/utils/formatPhoneNumber';
+
+import destinations from '@/constants/destinations';
+import validation from '@/constants/validation';
+
 import styles from './Form.module.scss';
-import Flex from '@/components/commons/Flex/Flex';
-import Button from '@/components/commons/Button/Button';
-import Select from '@/components/commons/Select/Select';
-import Textarea from '@/components/commons/Textarea/Textarea';
-import Text from '@/components/commons/Text/Text';
-import Radio from '@/components/commons/Radio/Radio';
-import Checkbox from '@/components/commons/Checkbox/Checkbox';
-import { destinations } from '@/data/destinations';
-import { useState } from 'react';
 
 const Form = () => {
-  const [form, setForm] = useState({
-    name: '',
-    destination: '',
-    email: '',
-    phone: '',
-    dateFrom: '',
-    dateTo: '',
-    comment: '',
-    isAdult: true,
-    isAgree: false,
-  });
-
-  const handleChange = (name, value) => {
-    setForm((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(form);
-  };
-
-  const handleReset = () => {
-    setForm({
+  const {
+    handleSubmit,
+    control,
+    reset,
+    getValues,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
       name: '',
       destination: '',
       email: '',
@@ -46,101 +38,172 @@ const Form = () => {
       comment: '',
       isAdult: true,
       isAgree: false,
-    });
+    },
+  });
+
+  const onSubmit = (data) => {
+    console.log(data);
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit} onReset={handleReset}>
-      <Flex className={styles.content} vertical align="stretch" gap={33}>
+    <form
+      className={styles.root}
+      onSubmit={handleSubmit(onSubmit)}
+      onReset={reset}
+    >
+      <Flex className={styles.content} vertical align="stretch">
         <Grid
           className={styles.content}
           breakpoints={{ large: 2, big: 2, small: 1 }}
-          gap={30}
-          gapY={33}
         >
-          <Input
-            required
-            label="Имя"
-            placeholder="Введите Ваше имя"
-            value={form.name}
-            onChange={(e) => handleChange('name', e.target.value)}
+          <Controller
+            control={control}
+            name="name"
+            rules={validation.name}
+            render={({ field }) => (
+              <Input
+                label="Имя"
+                placeholder="Введите Ваше имя"
+                {...field}
+                error={errors.name?.message}
+              />
+            )}
           />
-          <Select
-            required
-            label="Направление"
-            placeholder="Куда хотите ехать"
-            items={destinations}
-            value={form.destination}
-            onChange={(e) => handleChange('destination', e.target.value)}
+          <Controller
+            control={control}
+            name="destination"
+            rules={validation.destination}
+            render={({ field }) => (
+              <Select
+                label="Направление"
+                placeholder="Куда хотите ехать"
+                items={destinations}
+                {...field}
+                error={errors.destination?.message}
+              />
+            )}
           />
-          <Input
-            required
-            label="Email"
-            type="email"
-            placeholder="example@mail.com"
-            value={form.email}
-            onChange={(e) => handleChange('email', e.target.value)}
+          <Controller
+            control={control}
+            name="email"
+            rules={validation.email}
+            render={({ field }) => (
+              <Input
+                label="Email"
+                type="email"
+                placeholder="example@mail.com"
+                {...field}
+                error={errors.email?.message}
+              />
+            )}
           />
-          <Input
-            required
-            label="Телефон"
-            type="tel"
-            placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
-            value={form.phone}
-            onChange={(e) => handleChange('phone', e.target.value)}
+          <Controller
+            control={control}
+            name="phone"
+            rules={validation.phone}
+            render={({ field }) => (
+              <Input
+                label="Телефон"
+                type="tel"
+                placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+                value={field.value}
+                onChange={(e) =>
+                  field.onChange(formatPhoneNumber(e.target.value))
+                }
+                error={errors.phone?.message}
+              />
+            )}
           />
-          <Input
-            required
-            label="Дата от"
-            type="date"
-            placeholder="ДД.ММ.ГГГГ"
-            value={form.dateFrom}
-            onChange={(e) => handleChange('dateFrom', e.target.value)}
+          <Controller
+            control={control}
+            name="dateFrom"
+            rules={validation.dateFrom}
+            render={({ field }) => (
+              <Input
+                label="Дата от"
+                type="date"
+                placeholder="ДД.ММ.ГГГГ"
+                {...field}
+                error={errors.dateFrom?.message}
+              />
+            )}
           />
-          <Input
-            required
-            label="Дата до"
-            type="date"
-            placeholder="ДД.ММ.ГГГГ"
-            min={form.dateFrom}
-            value={form.dateTo}
-            onChange={(e) => handleChange('dateTo', e.target.value)}
+          <Controller
+            control={control}
+            name="dateTo"
+            rules={{
+              ...validation.dateTo,
+              validate: (value) =>
+                value >= getValues('dateFrom') ||
+                'Дата возвращения не может быть раньше даты начала',
+            }}
+            render={({ field }) => (
+              <Input
+                label="Дата до"
+                type="date"
+                min={getValues('dateFrom')}
+                placeholder="ДД.ММ.ГГГГ"
+                {...field}
+                error={errors.dateTo?.message}
+              />
+            )}
           />
         </Grid>
-        <Textarea
-          required
-          label="Комментарий"
-          value={form.comment}
-          onChange={(e) => handleChange('comment', e.target.value)}
+        <Controller
+          control={control}
+          name="comment"
+          render={({ field }) => (
+            <Textarea
+              label="Комментарий"
+              placeholder="Ваш комментарий"
+              {...field}
+            />
+          )}
         />
-        <Flex vertical gap={8}>
+        <Flex className={styles.radio} vertical>
           <Text>Вам есть 18 лет?</Text>
-          <Flex gap={30}>
-            <Radio
-              label="Да"
-              name="isAdult"
-              checked={form.isAdult}
-              onChange={() => handleChange('isAdult', true)}
-            />
-            <Radio
-              label="Нет"
-              name="isAdult"
-              checked={!form.isAdult}
-              onChange={() => handleChange('isAdult', false)}
-            />
-          </Flex>
+          <Controller
+            control={control}
+            name="isAdult"
+            render={({ field }) => (
+              <Flex className={styles.group}>
+                <Radio
+                  label="Да"
+                  name="isAdult"
+                  checked={field.value}
+                  onChange={() => field.onChange(true)}
+                />
+                <Radio
+                  label="Нет"
+                  name="isAdult"
+                  checked={!field.value}
+                  onChange={() => field.onChange(false)}
+                />
+              </Flex>
+            )}
+          />
         </Flex>
-        <Checkbox
-          label={
-            <span className={styles.agreement}>
-              Нажимая кнопку, я принимаю условия{' '}
-              <a href="#">Лицензионного договора</a>
-            </span>
-          }
-          checked={form.isAgree}
-          onChange={(e) => handleChange('isAgree', e.target.checked)}
+        <Controller
+          control={control}
+          name="isAgree"
+          rules={validation.isAgree}
+          render={({ field }) => (
+            <Checkbox
+              label={
+                <span className={styles.agreement}>
+                  Нажимая кнопку, я принимаю условия&nbsp;
+                  <Link className={styles.link} href="#" isExternal>
+                    Лицензионного договора
+                  </Link>
+                </span>
+              }
+              checked={field.value}
+              onChange={(e) => field.onChange(e.target.checked)}
+              error={errors.isAgree}
+            />
+          )}
         />
-        <Flex className={styles.btns} gap={30}>
+        <Flex className={styles.btns}>
           <Button type="submit">Найти тур</Button>
           <Button type="reset" variant="filled">
             Сбросить

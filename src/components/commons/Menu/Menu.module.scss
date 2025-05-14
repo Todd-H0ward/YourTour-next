@@ -1,20 +1,7 @@
-@use '@/assets/styles/helpers';
-
 .list {
+  gap: 50px;
+
   @media (max-width: 1024px) {
     gap: clamp(15px, -1.875rem + 5.86vw, 30px);
-  }
-}
-
-.link {
-  position: relative;
-
-  &::after {
-    background-color: var(--white);
-    @extend .underline;
-  }
-
-  &:hover::after {
-    width: 100%;
   }
 }

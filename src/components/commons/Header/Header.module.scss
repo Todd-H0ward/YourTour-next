@@ -1,34 +1,33 @@
-.header {
+@use "@/styles/extends";
+
+.root {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 29px 0;
+  padding: 28px 0;
   color: var(--white);
-  transition: all 0.3s;
+  transition:
+    color 0.4s ease-in-out,
+    background 0.3s ease-in,
+    backdrop-filter 0.5s ease-in;
 
   &.fixed {
     position: fixed;
     color: var(--black);
     background: rgba(243, 239, 232, 0.6);
     backdrop-filter: blur(27px);
-
-    .logo {
-      filter: invert(1);
-    }
-
-    & *::after {
-      background-color: var(--black);
-    }
   }
 
   @media (max-width: 375px) {
-    padding: 33px 0;
+    padding: 28px 0;
   }
 }
 
-.container {
+.inner {
+  @extend .container;
+
   @media (max-width: 1024px) {
     padding: 0 clamp(20px, -0.086rem + 5.7vw, 57px) !important;
   }
@@ -39,7 +38,15 @@
 }
 
 .logo {
-  width: clamp(133px, 19vw, 182px);
+  display: flex;
+
+  &::after {
+    display: none;
+  }
+
+  & * {
+    width: clamp(133px, 19vw, 182px);
+  }
 }
 
 .menu {

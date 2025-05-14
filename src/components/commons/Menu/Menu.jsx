@@ -1,20 +1,32 @@
-import Link from 'next/link';
-import Flex from '@/components/commons/Flex/Flex';
+import { arrayOf, shape, string } from 'prop-types';
+
+import Flex from '@/components/commons/Flex';
+import Link from '@/components/commons/Link';
+
 import styles from './Menu.module.scss';
-import clsx from 'clsx';
 
 const Menu = ({ items, className }) => {
   return (
-    <nav className={clsx(styles.menu, className)}>
-      <Flex className={styles.list} gap={50}>
+    <nav className={className}>
+      <Flex className={styles.list}>
         {items.map((item) => (
-          <Link key={item.title} href={item.href} className={styles.link}>
+          <Link key={item.title} href={item.href}>
             {item.title}
           </Link>
         ))}
       </Flex>
     </nav>
   );
+};
+
+Menu.propTypes = {
+  items: arrayOf(
+    shape({
+      title: string.isRequired,
+      href: string.isRequired,
+    }),
+  ).isRequired,
+  className: string,
 };
 
 export default Menu;

@@ -1,15 +1,26 @@
-@use '@/assets/styles/typography';
-@use '@/assets/styles/helpers';
+@use '@/styles/typography';
 
-.btn {
+.root {
+  width: auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
-  white-space: nowrap;
   flex-shrink: 1;
-  width: auto;
   cursor: pointer;
+  transition:
+    background 0.3s,
+    color 0.3s;
+
+  &.withIcon {
+    width: auto;
+    padding: 7px 20px;
+    @extend .p-big;
+    font-weight: 700;
+    background: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+  }
 }
 
 .solid,
@@ -19,7 +30,6 @@
   padding: 15px 30px;
   @extend .p-normal;
   border-radius: 10px;
-  transition: all 0.3s;
 
   @media (max-width: 768px) {
     padding: 12px 15px;
@@ -52,27 +62,9 @@
   }
 }
 
-.link {
-  position: relative;
-
-  &::after {
-    @extend .underline;
-  }
-
-  &:hover:after {
-    width: 100%;
-  }
-}
-
-.btn.withIcon {
-  width: auto;
-  padding: 7px 20px;
+.clear {
+  padding: 0;
   background: none;
-  @extend .p-big;
-  font-weight: 700;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  transition: all 0.3s;
 }
 
 .small {

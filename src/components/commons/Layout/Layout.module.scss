@@ -1,4 +1,4 @@
-.layout {
+.root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@
   margin-bottom: 135px;
 
   @media (max-width: 768px) {
-    gap: 75px;
+    gap: 76px;
     margin-bottom: 75px;
   }
 }

@@ -1,31 +1,26 @@
-import Flex from '@/components/commons/Flex/Flex';
-import Title from '@/components/commons/Title/Title';
-import Text from '@/components/commons/Text/Text';
 import Image from 'next/image';
+import { number, shape, string } from 'prop-types';
+
+import Flex from '@/components/commons/Flex';
+import Text from '@/components/commons/Text';
+import Title from '@/components/commons/Title';
+
 import styles from './ReviewCard.module.scss';
 
 const ReviewCard = ({ review }) => {
   return (
-    <div className={styles.card}>
-      <Flex
-        className={styles.inner}
-        vertical
-        justify="between"
-        align="stretch"
-        gap={70}
-      >
-        <Flex className={styles.comment} vertical gap={28}>
-          {review.comment.split('\n').map((text, index) => (
-            <Text key={index} size="big" align="left">
+    <div className={styles.root}>
+      <Flex className={styles.inner} vertical justify="between" align="stretch">
+        <Flex className={styles.comment} vertical>
+          {review.comment.split('\n').map((text) => (
+            <Text key={text} className={styles.text} size="big" align="left">
               {text}
             </Text>
           ))}
         </Flex>
         <Flex justify="between" align="end">
-          <Flex vertical gap={8}>
-            <Title mb={0} size="small">
-              {review.name}
-            </Title>
+          <Flex className={styles.info} vertical>
+            <Title size="small">{review.name}</Title>
             <Text size="small">Тур: {review.tour}</Text>
           </Flex>
           <Image
@@ -39,6 +34,16 @@ const ReviewCard = ({ review }) => {
       </Flex>
     </div>
   );
+};
+
+ReviewCard.propTypes = {
+  review: shape({
+    id: number.isRequired,
+    name: string.isRequired,
+    tour: string.isRequired,
+    comment: string.isRequired,
+    avatar: string.isRequired,
+  }).isRequired,
 };
 
 export default ReviewCard;
