@@ -8,7 +8,7 @@ import styles from './Hero.module.scss';
 
 const Hero = () => {
   return (
-    <Section className={styles.hero} fullWidth>
+    <Section className={styles.root} fullWidth>
       <Flex className={styles.content} vertical align="center">
         <Title className={styles.title} size="big" align="center">
           Идеальные путешествия существуют

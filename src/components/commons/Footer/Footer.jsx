@@ -8,7 +8,7 @@ import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.root}>
       <Flex className={styles.inner} justify="between" align="center">
         <Text>Наши социальные сети</Text>
 

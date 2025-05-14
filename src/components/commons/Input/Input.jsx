@@ -11,7 +11,7 @@ const Input = ({ value, onChange, label, type = 'text', error, ...props }) => {
       {label}
       <input
         className={clsx(
-          styles.input,
+          styles.root,
           type === 'date' && styles.date,
           !value && styles.empty,
           error && styles.error,

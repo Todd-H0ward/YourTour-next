@@ -13,7 +13,7 @@ const HistoryCard = ({ history }) => {
   const { title, description, advantages, socials, image } = history;
 
   return (
-    <div className={styles.card}>
+    <div className={styles.root}>
       <Image
         className={styles.image}
         src={image}

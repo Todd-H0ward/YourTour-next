@@ -11,7 +11,7 @@ import styles from './HomePage.module.scss';
 
 const HomePage = () => {
   return (
-    <Layout className={styles.page}>
+    <Layout className={styles.root}>
       <Hero />
       <Tours />
       <CreateTour />

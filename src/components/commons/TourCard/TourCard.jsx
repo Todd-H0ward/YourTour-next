@@ -10,7 +10,7 @@ import styles from './TourCard.module.scss';
 
 const TourCard = ({ tour }) => {
   return (
-    <div className={styles.card}>
+    <div className={styles.root}>
       <Image
         className={styles.image}
         width={370}

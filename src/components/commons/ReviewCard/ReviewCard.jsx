@@ -9,7 +9,7 @@ import styles from './ReviewCard.module.scss';
 
 const ReviewCard = ({ review }) => {
   return (
-    <div className={styles.card}>
+    <div className={styles.root}>
       <Flex className={styles.inner} vertical justify="between" align="stretch">
         <Flex className={styles.comment} vertical>
           {review.comment.split('\n').map((text) => (

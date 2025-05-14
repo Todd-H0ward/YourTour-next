@@ -28,7 +28,7 @@ const Flex = ({
   return (
     <div
       className={clsx(
-        styles.flex,
+        styles.root,
         alignClasses[align],
         justifyClasses[justify],
         vertical && styles.vertical,

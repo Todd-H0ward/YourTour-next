@@ -20,7 +20,7 @@ const Select = ({ label, placeholder, items, value, onChange, error }) => {
       <div className={styles.wrapper}>
         <select
           className={clsx(
-            styles.select,
+            styles.root,
             value && styles.selected,
             error && styles.error,
           )}

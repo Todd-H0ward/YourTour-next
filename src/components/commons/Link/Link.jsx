@@ -9,7 +9,7 @@ const Link = ({ href, isExternal = false, children, className, ...props }) => {
     return (
       <a
         href={href}
-        className={clsx(styles.link, className)}
+        className={clsx(styles.root, className)}
         target="_blank"
         rel="noopener noreferrer"
         {...props}
@@ -20,7 +20,7 @@ const Link = ({ href, isExternal = false, children, className, ...props }) => {
   }
 
   return (
-    <NavLink className={clsx(styles.link, className)} href={href} {...props}>
+    <NavLink className={clsx(styles.root, className)} href={href} {...props}>
       {children}
     </NavLink>
   );

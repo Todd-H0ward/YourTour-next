@@ -7,7 +7,7 @@ const Radio = ({ name, label, checked, onChange, className, ...props }) => {
   return (
     <label className={styles.label}>
       <input
-        className={clsx(styles.radio, className)}
+        className={clsx(styles.root, className)}
         type="radio"
         checked={checked}
         name={name}

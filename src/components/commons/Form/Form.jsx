@@ -47,7 +47,7 @@ const Form = () => {
 
   return (
     <form
-      className={styles.form}
+      className={styles.root}
       onSubmit={handleSubmit(onSubmit)}
       onReset={reset}
     >

@@ -23,7 +23,7 @@ const Button = ({
   return (
     <button
       className={clsx(
-        styles.btn,
+        styles.root,
         variantClasses[variant],
         withIcon && styles.withIcon,
         small && styles.small,

@@ -1,6 +1,6 @@
 @use '@/styles/typography';
 
-.form {
+.root {
   width: 100%;
   padding: clamp(60px, 2.212rem + 2.4vw, 70px);
   background: var(--white);

@@ -7,7 +7,7 @@ const Textarea = ({ value, onChange, label, ...props }) => {
     <label className={styles.label}>
       {label}
       <textarea
-        className={styles.textarea}
+        className={styles.root}
         value={value}
         onChange={onChange}
         {...props}

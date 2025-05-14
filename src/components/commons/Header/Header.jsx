@@ -36,7 +36,7 @@ const Header = () => {
   const isStickyHeader = scrollY > 450;
 
   return (
-    <header className={clsx(styles.header, isStickyHeader && styles.fixed)}>
+    <header className={clsx(styles.root, isStickyHeader && styles.fixed)}>
       <Flex className={styles.inner} justify="between" align="center">
         <Link className={styles.logo} href="/">
           <Logo />

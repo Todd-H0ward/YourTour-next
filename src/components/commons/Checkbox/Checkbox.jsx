@@ -10,7 +10,7 @@ const Checkbox = ({ label, checked, onChange, error, className }) => {
     <label className={styles.label}>
       <div className={styles.wrapper}>
         <input
-          className={clsx(styles.checkbox, error && styles.error, className)}
+          className={clsx(styles.root, error && styles.error, className)}
           type="checkbox"
           checked={checked}
           onChange={onChange}

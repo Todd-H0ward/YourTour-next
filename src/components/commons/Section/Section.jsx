@@ -14,7 +14,7 @@ const Section = ({
   return (
     <section
       className={clsx(
-        styles.section,
+        styles.root,
         large && styles.large,
         small && styles.small,
         fullWidth && styles.full,

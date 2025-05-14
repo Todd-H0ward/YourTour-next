@@ -10,7 +10,7 @@ const Grid = ({
 }) => {
   return (
     <div
-      className={clsx(styles.grid, className)}
+      className={clsx(styles.root, className)}
       style={{
         '--large': breakpoints.large,
         '--big': breakpoints.big,
