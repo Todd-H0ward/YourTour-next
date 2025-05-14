@@ -16,7 +16,7 @@ const Footer = () => {
           {socialLinks.map((link) => (
             <Flex key={link.title} className={styles.item} align="center">
               {link.icon}
-              <Link className={styles.link} href={link.link}>
+              <Link className={styles.link} href={link.link} isExternal>
                 {link.title}
               </Link>
             </Flex>

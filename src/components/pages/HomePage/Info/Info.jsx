@@ -28,8 +28,12 @@ const Info = () => {
             Пора в путешествие вместе с нами!
           </Title>
           <Text className={styles.text}>
-            Напиши на почту и узнай подробности на{' '}
-            <Link className={styles.link} href="mailto:yourtour@gmail.com">
+            Напиши на почту и узнай подробности на&nbsp;
+            <Link
+              className={styles.link}
+              href="mailto:yourtour@gmail.com"
+              isExternal
+            >
               yourtour@gmail.com
             </Link>
           </Text>

@@ -192,7 +192,7 @@ const Form = () => {
               label={
                 <span className={styles.agreement}>
                   Нажимая кнопку, я принимаю условия&nbsp;
-                  <Link className={styles.link} href="#">
+                  <Link className={styles.link} href="#" isExternal>
                     Лицензионного договора
                   </Link>
                 </span>

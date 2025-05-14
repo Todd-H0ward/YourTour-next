@@ -47,7 +47,7 @@ const HistoryCard = ({ history }) => {
           <Flex className={styles.links}>
             {socials &&
               socials.map((social) => (
-                <Link key={social.type} href={social.url}>
+                <Link key={social.type} href={social.url} isExternal>
                   {social.type}
                 </Link>
               ))}
